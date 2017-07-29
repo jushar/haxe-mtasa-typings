@@ -8,6 +8,9 @@ extern class Element
     public function setPosition(position: Vector3): Bool;
     public function getPosition(): Vector3;
 
+    /**
+     Freezes/unfreezes an element
+    **/
     public function setFrozen(frozen: Bool): Bool;
     public function isFrozen(): Bool;
 }
