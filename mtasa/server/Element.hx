@@ -58,7 +58,7 @@ extern class Element
   /**
     Sets element's velocity
   **/
-  public function setVelocity(speedX: Float, speedY: Float, speedZ: Float): Bool;
+  public function setVelocity(speedVector: Vector3): Bool;
 
   /**
     Sets element's syncer
