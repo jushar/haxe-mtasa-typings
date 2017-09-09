@@ -17,7 +17,7 @@ extern class Element
     `cloneChildren` whether or not children should also be cloned
     Returns the cloned element
   **/
-  public function clone(element: Element, position?: Vector3, cloneChildren?: Bool): Element;
+  public function clone(position?: Vector3, cloneChildren?: Bool): Element;
 
   /**
     Creates a dummy element of type `elementType` with
@@ -54,4 +54,24 @@ extern class Element
     Returns whether or not an element is frozen
   **/
   public function isFrozen(): Bool;
+
+  /**
+    Sets element's velocity
+  **/
+  public function setVelocity(speedX: Float, speedY: Float, speedZ: Float): Bool;
+
+  /**
+    Sets element's syncer
+  **/
+  public function setSyncer(player: Player): Bool;
+
+  /**
+    Sets element's parent
+  **/
+  public function setParent(parent: Element): Bool;
+
+  /**
+    Sets element model
+  **/
+  public function setModel(model: Int): Bool;
 }
