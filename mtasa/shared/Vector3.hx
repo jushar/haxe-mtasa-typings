@@ -1,31 +1,73 @@
 package mtasa.shared;
 
+/**
+The vector3 class represents a three-dimensional vector.
+
+https://wiki.multitheftauto.com/wiki/Vector/Vector3
+**/
 @:native("Vector3")
 extern class Vector3 {
   public var x: Float;
   public var y: Float;
   public var z: Float;
 
+  /**
+    This is default constructor for the Vector3 class and returns a Vector3 object.
+  **/
   public static function create(x: Float, y: Float, z: Float): Vector3;
   
+  /**
+    Return lenght in Float from map center ( 0,0,0 ) to this vector3
+  **/
   public function getLength(): Float;
-  public function getSquaredLength(): Float;
-  public function getNormalized(): Vector3;
-  public function getX(): Float { return this.x; };
-  public function getY(): Float { return this.y; };
-  public function getZ(): Float { return this.z; };
-  public function setX(x: Float): Bool;
-  public function setY(y: Float): Bool;
-  public function setZ(z: Float): Bool;
-  public function normalize(): Bool;
-  public function dot(vector: Vector3): Float;
-  public function cross(vector: Vector3): Vector3;
 
-  //@:op(A + B) -- i dont know how this works :/
-  public function add(vector:Vector3):Vector3 {
-      return new Vector3(this.x+vector.x,this.y+vector.y,this.z+vector.z);
-  }
-  public function distance(vector:Vector3):Float {
-      // todo
-  }
+  /**
+    TODO
+  **/
+  public function getSquaredLength(): Float;
+
+  /**
+   Returns a normalized vector (of length 1) of the vector it's used on. Differently from the Vector3:normalize method, this one returns a vector3 and doesn't modify the original vector.
+  **/
+  public function getNormalized(): Vector3;
+
+  /**
+    Return Vector X.
+  **/
+  public function getX(): Float;
+  /**
+    Return Vector Y.
+  **/
+  public function getY(): Float;
+  /**
+    Return Vector Z.
+  **/
+  public function getZ(): Float;
+  /**
+    Set Vector Z.
+  **/
+  public function setX(x: Float): Bool;
+  /**
+    Set Vector Z.
+  **/
+  public function setY(y: Float): Bool;
+  /**
+    Set Vector Z.
+  **/
+  public function setZ(z: Float): Bool;
+  /**
+    Converts a vector to a unit vector (a vector of length 1).
+  **/
+  public function normalize(): Bool;
+  /**
+    Calculates the (standard) dot/scalar product of two vectors. If we call that vectors A and B, the dot product is written as A · B. This can be used to calculate the angle between them. If the standard scalar product is 0, both vectors are orthogonal.
+  **/
+  public function dot(vector: Vector3): Float;
+  /**
+    Calculates the cross product of two vectors, A and B, and is written as A × B. The result is another vector which:
+    Is orthogonal to both A and B.
+    Its direction is determined by the right-hand rule.
+    Its length is equal to the area of the parallelogram that A and B form (which in turn is equal to A's length by B's length by the sine of the minimum angle between A and B).
+  **/
+  public function cross(vector: Vector3): Vector3;
 }
