@@ -8,7 +8,7 @@ extern class Element
   /**
     Clears the visibility of the element
   **/
-  public function clearVisibility(): Bool
+  public function clearVisibility(): Bool;
   
   /**
     Clones (creates an exact copy of) an element
@@ -17,13 +17,13 @@ extern class Element
     `cloneChildren` whether or not children should also be cloned
     Returns the cloned element
   **/
-  public function clone(element: Element, position?: Vector3, cloneChildren?: Bool): Element;
+  public function clone(element: Element, ?position: Vector3, ?cloneChildren: Bool): Element;
 
   /**
     Creates a dummy element of type `elementType` with
     the element ID `elementId`
   **/
-  public static function create(elementType: String, elementId?: String): Element;
+  public static function create(elementType: String, ?elementId: String): Element;
 
   /**
     Destroys an element
