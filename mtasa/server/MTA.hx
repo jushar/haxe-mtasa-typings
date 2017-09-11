@@ -21,7 +21,7 @@ extern class MTA
   /**
     Creates console with given name
   **/
-  public static function addCommandHandler(commandName: String, handlerFunction: Player->String->Array<String>->Bool, ?restricted = false, ?caseSensitive = true)
+  public static function addCommandHandler(commandName: String, handlerFunction: Player->String->Array<String>->Bool, ?restricted: Bool = false, ?caseSensitive: Bool = true): Bool;
 
   /**
     Outputs given message to server log
