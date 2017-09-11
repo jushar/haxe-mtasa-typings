@@ -7,76 +7,76 @@ extern class Player extends Element {
   /**
   This variable return if the specified player's radar map has been forced on or not.
   **/
-  public static var mapForced: Bool;
+  public var mapForced: Bool;
 
   /**
   This variable returns anti-cheat info for a player. The info returned by this variable can change over time,
   **/
-  public static var ACInfo: Dynamic;
+  public var ACInfo: Dynamic;
 
   /**
   This variable allows you to check the current blur level of a specified player.
   **/
-  public static var blurLevel: Int;
+  public var blurLevel: Int;
 
   /**
   This variable return the amount of time in milliseconds that a players position has not changed.
   **/
-  public static var idleTime: Bool;
+  public var idleTime: Bool;
 
   /**
   This variable returns a string containing the IP address of the client.
   **/
-  public static var ip: String;
+  public var ip: String;
 
   /**
   Returns the amount of money a player currently has.
   **/
-  public static var money: Int;
+  public var money: Int;
 
   /**
   This variable returns a string containing the name of the specified player.
   **/
-  public static var name: String;
+  public var name: String;
   
   /**
   This will allow you to retrieve the name tag a player is currently using.
   **/
-  public static var nametagText: String;
+  public var nametagText: String;
 
   /**
   This variable returns the ping of a specified player. The ping is the number of milliseconds that data takes to travel from the player's client to the server or vice versa.
   **/
-  public static var ping: Int;
+  public var ping: Int;
 
   /**
   This variable returns the serial for a specified player.
   **/
-  public static var serial: String;
+  public var serial: String;
 
   /**
   Return the team class represents player teams.
   **/
-  //public static var team: Bool;
+  public var team: Bool;
   /**
   This variable gives you various version information about MTA and the operating system.
   **/
-  public static var version: String;
+  public var version: String;
 
   /**
   This variable return a player's current wanted level. The wanted level is indicated by the amount of stars a player has on the GTA HUD.
   **/
-  public static var wantedLevel: Int;
+  public var wantedLevel: Int;
 
   /**
   Use this variable to check if a player has been muted.
   **/
-  public static var muted: Bool;
+  public var muted: Bool;
 
   /**
   This variable will allow you to determine if a player's name tag is currently showing.
   **/
-  public static var nametagShowing: Bool;
+  public var nametagShowing: Bool;
 
 
   /**
@@ -137,7 +137,7 @@ extern class Player extends Element {
   /**
   This method gets the current team a player is on.
   **/
-  //public function getTeam(): Team;
+  public function getTeam(): Team;
   /**
   This method gives you various version information about MTA and the operating system.
   **/
@@ -237,7 +237,7 @@ extern class Player extends Element {
   /**
   This method adds a player to an existing team. The player will automatically be removed from his current team if he's on one.
   **/
-  //public function setTeam(theTeam:Team): Bool;
+  public function setTeam(theTeam:Team): Bool;
   /**
   This method allows you to change who can hear the voice of a player.
   **/
@@ -251,7 +251,7 @@ extern class Player extends Element {
   /**
   This method spawns the player at an arbitary point on the map.
   **/
-  //public function spawn(x:Float, y:Float, z:Float, ?rotation:Int, ?skinID:Int, ?interior:Int, ?dimension:Int, ?theTeam:Team): Bool;
+  public function spawn(x:Float, y:Float, z:Float, ?rotation:Int, ?skinID:Int, ?interior:Int, ?dimension:Int, ?theTeam:Team): Bool;
   /**
   This method subtracts money from a player's current money amount.
   **/
@@ -275,7 +275,7 @@ extern class Player extends Element {
   /**
   This function gets the position of the camera and the position of the point it is facing.
   **/
-  //public function getCameraMatrix(): ???;
+  public function getCameraMatrix(): Dynamic;
 
   /**
   This function returns an element that corresponds to the current target of the specified player's camera (i.e. what it is following).
@@ -296,4 +296,9 @@ extern class Player extends Element {
   This function allows you to set a player's camera to follow other elements instead. Currently supported element type is: Player
   **/
   public function setCameraTarget(?target:Player): Bool;
+
+  /**
+  This functions logs the given player in to the given account. You need to provide the password needed to log into that account.
+  **/
+  public function logIn(theAccount:Account, thePassword:String): Bool;
 }
