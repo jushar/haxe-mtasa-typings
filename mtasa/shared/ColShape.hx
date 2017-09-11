@@ -31,10 +31,4 @@ extern class ColShape{
     This function creates a collision polygon. See Wikipedia for a definition of a polygon. The first set of X Y of this shape is not part of the colshape bounds, so can set anywhere in the game world, however for performance, place it as close to the centre of the polygon as you can. It should be noted this shape is 2D. There should be at least 3 bound points set.
     **/
     public static function Polygon(fX:Float, fY:Float, fX1:Float, fY1:Float, fX2:Float, fY2:Float, fX3:Float, fY3:Float, rest:haxe.extern.Rest<Float>):ColShape;
-    
-    /**
-    This function is used to retrieve a list of all elements in a colshape, of the specified type.
-    "player","ped","vehicle","object","pickup","marker",
-    **/
-    public function getElementsWithin(?element:String): Dynamic;
 }
