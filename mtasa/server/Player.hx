@@ -301,4 +301,9 @@ extern class Player extends Element {
   This functions logs the given player in to the given account. You need to provide the password needed to log into that account.
   **/
   public function logIn(theAccount:Account, thePassword:String): Bool;
+
+  /**
+  This function plays a frontend sound for the specified player.
+  **/
+  public function playSoundFrontEnd(sound:Int): Bool;
 }
