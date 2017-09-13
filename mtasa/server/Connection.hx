@@ -1,7 +1,7 @@
 package mtasa.server;
 
 @:native("Connection")
-extern class Connection {
+extern class Connection extends Element{
     /**
         This function opens a connection to a database and returns an element that can be used with dbQuery. To disconnect use destroyElement.
         @param databaseType sqlite ( Path to file ) or mysql ( dbname=NAME;host=IP )
