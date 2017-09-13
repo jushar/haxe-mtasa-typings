@@ -2,6 +2,14 @@ package mtasa.shared;
 
 import mtasa.server.Element;
 import mtasa.shared.Vector3;
+
+@:multiReturn extern class Color {
+  var r : Int;
+  var g : Int;
+  var b : Int;
+  var a : Int;
+}
+
 /**
 The marker class represents colored, 3D shapes in the GTA world. There are several types of markers, including cylinders and checkpoints. In scripts, markers are often used to mark spots and trigger some sort of action when a player goes into them.
 
@@ -28,12 +36,12 @@ extern class Marker {
     /**
     Creates a new file in a directory of a resource. If there already exists a file with the specified name, it is overwritten with an empty file.
     **/
-    public function new(vector:Vector3, ?theType:String, ?size:Float, ?r:Int, ?g:Int, ?b:Int, ?a:Int, ?visibleTo:Element);
+    public function new(vector:Vector3, ?Type:String, ?size:Float, ?r:Int, ?g:Int, ?b:Int, ?a:Int, ?visibleTo:Element);
 
     /**
     This method returns the color and transparency for a marker element. Not all marker types support transparency.
     **/
-    public function getColor(): Dynamic;
+    public function getColor(): Color;
 
     /**
     Returns the number of markers that currently exist in the world.
@@ -58,7 +66,7 @@ extern class Marker {
     /**
     This method sets the color of the specified marker by modifying the values for red, green and blue.
     **/
-    public function setColor(rgb:Vector3): Bool;
+    public function setColor(color:Vector3): Bool;
     
     /**
     This method allows changing the icon of a checkpoint marker.
