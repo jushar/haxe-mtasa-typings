@@ -8,6 +8,11 @@ extern class Object extends Element {
   public static function create(model: UInt, position: Vector3, ?rotation: Vector3, ?isLowLOD: Bool): Object;
 
   /**
+  This variable returns the visible size of an object.
+  **/
+  public var scale: Float;
+  
+  /**
   This method will smoothly move an object from its current position to a specified rotation and position.
   **/
   public function move(time:Int, targetx:Float, targety:Float, targetz:Float, ?moverx:Float, ?movery:Float, ?moverz:Float, ?strEasingType:String, ?fEasingPeriod:Float, ?fEasingAmplitude:Float, ?fEasingOvershoot:Float): Bool;
@@ -21,11 +26,6 @@ extern class Object extends Element {
   This method returns the visible size of an object.
   **/
   public function getScale(): Float;
-
-  /**
-  This variable returns the visible size of an object.
-  **/
-  public var scale: Float;
 
   /**
   This function changes the visible size of an object.
