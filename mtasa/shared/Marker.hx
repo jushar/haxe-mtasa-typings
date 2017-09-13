@@ -73,5 +73,5 @@ extern class Marker {
     /**
     This method changes a marker's type. The type controls how the marker is displayed in the game. It's important that you use marker types that users are used to from the single player game. For example, checkpoints are used in races, rings are used for aircraft races, arrows are used for entering buildings etc.
     **/
-    public function setMarkerType(markerType:String): Bool;
+    public function setType(markerType:String): Bool;
 }
