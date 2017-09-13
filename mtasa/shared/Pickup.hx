@@ -47,5 +47,5 @@ extern class Pickup {
     /**
     This function is used to simulate the player using a pickup
     **/
-    public function usePickup(thePlayer:Player): Bool;
+    public function use(thePlayer:Player): Bool;
 }
