@@ -1,4 +1,5 @@
 package mtasa.shared;
+
 /**
 The collision shape class represents invisible collision detection shapes that can be created in the GTA world. Collision shapes are typically used to detect physical entities moving through them and perform actions when they do.
 
