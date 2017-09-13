@@ -1,8 +1,22 @@
 package mtasa.shared;
 
-
 @:native("File")
 extern class File {
+    /**
+    Checks if the file position is at the end of the file.
+    **/
+    public var eof: Bool;
+
+    /**
+    Returns the total size in bytes of the given file.
+    **/
+    public var size: Int;
+
+    /**
+    Returns the current read/write position in the given file.
+    **/
+    public var pos: Int;
+
     /**
     Creates a new file in a directory of a resource. If there already exists a file with the specified name, it is overwritten with an empty file.
     **/
@@ -47,11 +61,6 @@ extern class File {
     Returns the current read/write position in the given file.
     **/
     public function getPos(): Int;
-    
-    /**
-    Returns the current read/write position in the given file.
-    **/
-    public var pos: Int;
 
     /**
     Returns the total size in bytes of the given file.
@@ -59,19 +68,9 @@ extern class File {
     public function getSize(): Int;
 
     /**
-    Returns the total size in bytes of the given file.
-    **/
-    public var size: Int;
-
-    /**
     Checks if the file position is at the end of the file.
     **/
     public function isEOF(): Bool;
-
-    /**
-    Checks if the file position is at the end of the file.
-    **/
-    public var eof: Bool;
 
     /**
     Reads the specified number of bytes from the given file starting at its current read/write position, and returns them as a string.
@@ -93,7 +92,6 @@ extern class File {
     **/
     public function setPos(offset:Int): Int;
     
-
     /**
     Sets the current read/write position in the file.
     **/
