@@ -1,10 +1,6 @@
 package mtasa.shared;
 
-@:multiReturn extern class TimerDetails {
-  var one : Int;
-  var two : Int;
-  var three : Int;
-}
+import mtasa.shared.MultiReturn;
 
 @:native("Timer")
 extern class Timer {
