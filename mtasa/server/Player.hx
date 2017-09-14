@@ -1,6 +1,6 @@
 package mtasa.server;
 
-import mtasa.shared.Vector3;
+import mtasa.shared.MultiReturn;
 
 @:native("Player")
 extern class Player extends Element {
@@ -38,7 +38,7 @@ extern class Player extends Element {
     This variable returns a string containing the name of the specified player.
   **/
   public var name: String;
-  
+
   /**
     This will allow you to retrieve the name tag a player is currently using.
   **/
@@ -123,7 +123,7 @@ extern class Player extends Element {
   /**
     This method gets the current color of a player's name tag as RGB values. These are in the range 0-255.
   **/
-  public function getNametagColor(): Vector3;
+  public function getNametagColor(): Color;
 
   /**
     This method returns the ping of a specified player. The ping is the number of milliseconds that data takes to travel from the player's client to the server or vice versa.
