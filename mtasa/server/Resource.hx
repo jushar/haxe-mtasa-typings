@@ -1,6 +1,5 @@
 package mtasa.server;
 
-import lua.NativeIterator;
 import mtasa.shared.MultiReturn;
 
 /**
