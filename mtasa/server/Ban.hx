@@ -2,7 +2,7 @@ package mtasa.server;
 
 import mtasa.server.Player;
 
-@:native('Ban')
+@:native("Ban")
 extern class Ban {
 
   /**
@@ -23,7 +23,7 @@ extern class Ban {
   /**
     This function will return a table containing all the bans present in the server's banlist.xml.
   **/
-  public function getList (): lua.Table;
+  public function getList (): lua.Table; // Piorun: don't know which values use here, help!
 
   /**
     This function will return the nickname (nickname that the player had when he was banned) of the specified ban.
