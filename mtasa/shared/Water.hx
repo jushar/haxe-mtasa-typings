@@ -1,6 +1,6 @@
 package mtasa.shared;
 
-import mtasa.shared.MultiReturnClasses;
+import mtasa.shared.MultiReturn;
 /**
   In San Andreas, the water in the game world (rivers, lakes, seas) is defined through a large number of water polygons, which can be quadrilateral or triangular. A water element represents one such polygon. You can create water elements with createWater or through a <water/> map element.
 
