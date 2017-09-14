@@ -9,7 +9,7 @@ extern class MTA
   public static var resourceRoot: Element;
 
   /**
-    Adds event handler to specific event and source element 
+    Adds event handler to specific event and source element
   **/
   public static function addEventHandler(name: String, attachTo: Element, func: Dynamic): Bool;
 
@@ -31,10 +31,10 @@ extern class MTA
   /**
     Outputs given message to debug
   **/
-  public static function outputDebugString(message: String): Bool;
+  public static function outputDebugString(message: Dynamic): Bool;
 
   /**
-    Outputs given message to ingame console 
+    Outputs given message to ingame console
   **/
   public static function outputConsole(message: String): Bool;
 
