@@ -2,13 +2,7 @@ package mtasa.shared;
 
 import mtasa.server.Element;
 import mtasa.shared.Vector3;
-
-@:multiReturn extern class Color {
-  var r : Int;
-  var g : Int;
-  var b : Int;
-  var a : Int;
-}
+import mtasa.shared.MultiReturn;
 
 /**
 The marker class represents colored, 3D shapes in the GTA world. There are several types of markers, including cylinders and checkpoints. In scripts, markers are often used to mark spots and trigger some sort of action when a player goes into them.
