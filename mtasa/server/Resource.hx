@@ -1,5 +1,6 @@
 package mtasa.server;
 
+import lua.NativeIterator;
 import mtasa.shared.MultiReturn;
 
 /**
@@ -134,7 +135,7 @@ extern class Resource {
 
     @see https://wiki.multitheftauto.com/wiki/GetResourceConfig
   **/
-  public static function getConfig(resourceName: String): dynamic;//xmlNode;
+  public static function getConfig(resourceName: String): Dynamic;//xmlNode;
 
   /**
     Returns a table containing the names of the functions that a resource exports.
@@ -169,7 +170,7 @@ extern class Resource {
 
     @see https://wiki.multitheftauto.com/wiki/GetResources
   **/
-  public function getAll(): Dynamic;
+  public static function getAll(): lua.Table<Int,Resource>;
 
   /**
     Checks whether a resource is currently archived (running from within a ZIP file).
