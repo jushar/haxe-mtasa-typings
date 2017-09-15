@@ -6,7 +6,7 @@ The collision shape class represents invisible collision detection shapes that c
 @see https://wiki.multitheftauto.com/wiki/Element/Collision_shape
 **/
 @:native("ColShape")
-extern class ColShape{
+extern class ColShape extends Element{
     /**
     This function creates a collision circle. This is a shape that has a position and a radius and infinite height that you can use to detect a player's presence. Events will be triggered when a player enters or leaves it.
     **/
