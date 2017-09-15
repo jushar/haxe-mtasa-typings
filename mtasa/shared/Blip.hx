@@ -10,7 +10,7 @@ import mtasa.shared.MultiReturn;
   @see https://wiki.multitheftauto.com/wiki/Element/Blip
 **/
 @:native("Blip")
-extern class Blip {
+extern class Blip extends Element{
   /**
     This function creates a blip element, which is displayed as an icon on the client's radar.
     @param visibleTo only server side
