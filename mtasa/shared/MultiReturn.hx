@@ -38,3 +38,16 @@ package mtasa.shared;
   var object: Bool;
   var vehicles: Bool;
 }
+
+@:multiReturn extern class Cursor3DPosition{
+  var cursorX: Float;
+  var cursorY: Float;
+  var worldX: Float;
+  var worldY: Float;
+  var worldZ: Float;
+}
+
+@:multiReturn extern class Clothes{
+  var texture: String;
+  var model: String;
+}
