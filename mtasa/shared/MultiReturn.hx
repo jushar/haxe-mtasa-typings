@@ -18,3 +18,23 @@ package mtasa.shared;
   var y: Int;
   var z: Float;
 }
+
+@:multiReturn extern class Anything{  // mayby haxe.extern.Rest<Dynamic> could be better then arg1,arg2,...
+  var arg1: Dynamic;
+  var arg2: Dynamic;
+  var arg3: Dynamic;
+  var arg4: Dynamic;
+  var arg5: Dynamic;
+}
+
+@:multiReturn extern class CameraMatrix{
+  var position: Vector3;
+  var lookAt: Vector3;
+  var roll: Float;
+  var fov: Float;
+}
+
+@:multiReturn extern class CameraClip{
+  var object: Bool;
+  var vehicles: Bool;
+}
