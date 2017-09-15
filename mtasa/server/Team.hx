@@ -7,7 +7,7 @@ The team class represents player teams. Players on the same team can use team fe
 @see https://wiki.multitheftauto.com/wiki/Element/Team
 **/
 @:native("Team")
-extern class Team{
+extern class Team extends Element{
     /**
     This variable tells you if friendly fire is turned on for the specified team.
     **/
