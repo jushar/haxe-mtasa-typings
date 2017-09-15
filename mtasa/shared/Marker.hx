@@ -10,7 +10,7 @@ The marker class represents colored, 3D shapes in the GTA world. There are sever
 @see https://wiki.multitheftauto.com/wiki/Element/Marker
 **/
 @:native("Marker")
-extern class Marker {
+extern class Marker extends Element{
 
     /**
     This variable returns a float containing the size of the specified marker.
