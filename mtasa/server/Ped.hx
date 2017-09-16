@@ -2,7 +2,7 @@ package mtasa.server;
 
 import mtasa.shared.Vector3;
 import mtasa.shared.MultiReturn;
-import mtasa.server.Vehicle;
+import mtasa.shared.Vehicle;
 
 @:native("Ped")
 extern class Ped extends Player {

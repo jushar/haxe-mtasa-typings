@@ -51,3 +51,31 @@ package mtasa.shared;
   var texture: String;
   var model: String;
 }
+
+@:multiReturn extern class ClothesModel{
+  var type: Int;
+  var index: Int;
+}
+
+@:multiReturn extern class PerformanceStats{  // TODO
+  var one: lua.Table<Dynamic,Dynamic>;
+  var two: lua.Table<Dynamic,Dynamic>;
+}
+
+@:multiReturn extern class AttachOffset{
+  var px: Float;
+  var py: Float;
+  var pz: Float;
+  var rx: Float;
+  var ry: Float;
+  var rz: Float;
+}
+
+@:multiReturn extern class BoundingBox{
+  var p1x: Float;
+  var p1y: Float;
+  var p1z: Float;
+  var p2x: Float;
+  var p2y: Float;
+  var p2z: Float;
+}
