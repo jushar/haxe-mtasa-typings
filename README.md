@@ -1,10 +1,12 @@
 # Haxe Typings for MTA:SA
-## Compiling examples
-```
-haxe -main Main -lua Main.lua Main.hx
-```
+## Resource Skeleton
+See https://github.com/Jusonex/haxe-mtasa-typings/tree/master/example/README.md
 
 ## Contributing
+### Enabling haxelib development mode
+```
+haxelib dev mtasa-typings .
+```
 ### Style Guide
 * Use Javadoc-style documentation and keep documentation short (i.e. it's not necessary to include the types in the documentation)
 * Indent documentation comments with 1 tab (equals 2 spaces)

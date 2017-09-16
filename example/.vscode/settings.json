@@ -1,0 +1,5 @@
+{
+    "haxe.displayConfigurations": [
+        ["-lib", "mtasa-typings", "server/Main.hx", "client/Main.hx"]
+    ]
+}

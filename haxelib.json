@@ -1,0 +1,12 @@
+{
+  "name": "mtasa-typings",
+  "url" : "https://github.com/Jusonex/haxe-mtasa-typings",
+  "license": "MIT",
+  "tags": ["mtasa", "typings"],
+  "description": "Provides typings (extern declarations) for MTA:SA",
+  "version": "1.0.0",
+  "classPath": ".",
+  "releasenote": "Initial release.",
+  "contributors": [],
+  "dependencies": {}
+}

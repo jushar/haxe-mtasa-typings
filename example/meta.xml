@@ -1,0 +1,7 @@
+<meta>
+  <info name="Haxe example resource" author="Haxe-MTA Team" description="Haxe example resource" type="script" version="0.1" />
+  <server_main src="server/Main.hx" />
+  <client_main src="client/Main.hx" />
+
+  <file src="haxe.png" />
+</meta>
