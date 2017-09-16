@@ -1,10 +1,33 @@
 package mtasa.shared;
-
+@:multiReturn extern class RGB{
+  var r: Int;
+  var g: Int;
+  var b: Int;
+}
 @:multiReturn extern class Color {
   var r: Int;
   var g: Int;
   var b: Int;
   var a: Int;
+}
+
+@:multiReturn extern class Color4 {
+  var r1: Int;
+  var g1: Int;
+  var b1: Int;
+  var a1: Int;
+  var r2: Int;
+  var g2: Int;
+  var b2: Int;
+  var a2: Int;
+  var r3: Int;
+  var g3: Int;
+  var b3: Int;
+  var a3: Int;
+  var r4: Int;
+  var g4: Int;
+  var b4: Int;
+  var a4: Int;
 }
 
 @:multiReturn extern class TimerDetails {
@@ -78,4 +101,16 @@ package mtasa.shared;
   var p2x: Float;
   var p2y: Float;
   var p2z: Float;
+}
+
+@:multiReturn extern class Variants{
+  var a: Int;
+  var b: Int;
+}
+
+@:multiReturn extern class WheelsState{
+  var frontLeft: Int;
+  var rearLeft: Int;
+  var frontRight: Int;
+  var rearRight: Int;
 }
