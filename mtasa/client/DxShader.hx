@@ -14,7 +14,7 @@ extern class DxShader {
     @param value to set, which can be a texture, a bool, a number or a list of numbers
     @see https://wiki.multitheftauto.com/wiki/DxSetShaderValue
   **/
-  public function setValue(parameterName: String, value: haxe.extern.Rest<Dynamic>): Bool;
+  public function setValue(parameterName: String, values: haxe.extern.Rest<Dynamic>): Bool;
 
   /**
     This function sets the amount of geometric sub-division to use when drawing a shader element with dxDrawImage.

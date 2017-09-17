@@ -3,8 +3,8 @@ package mtasa.server;
 import mtasa.server.Player;
 
 @:native("Ban")
-extern class Ban {
-
+extern class Ban
+{
   /**
     This function will add a ban for the specified IP/username/serial to the server
   **/

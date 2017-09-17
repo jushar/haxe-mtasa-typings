@@ -1,20 +1,22 @@
 package mtasa.shared;
 
 import mtasa.shared.MultiReturn;
+import mtasa.shared.Vector3;
 /**
   In San Andreas, the water in the game world (rivers, lakes, seas) is defined through a large number of water polygons, which can be quadrilateral or triangular. A water element represents one such polygon. You can create water elements with createWater or through a <water/> map element.
 
   @see https://wiki.multitheftauto.com/wiki/Element/Water
 **/
 @:native("Water")
-extern class Water{
+extern class Water
+{
   /**
     Creates an area of water.
     The largest possible size of a water area is 5996×5996.
 
     @see https://wiki.multitheftauto.com/wiki/CreateWater
   **/
-  public static function create(x1: Int, y1: Int, z1: Float, x2: Int, y2: Int, z2: Float, x3: Int, y3: Int, z3: Float, ?x4: Int, ?y4: Int, ?z4: Float, ?bShallow: Bool): Water;
+  public static function create(bottom_left: Vector3, bottom_right: Vector3, top_left: Vector3, ?top_right: Vector3, ?bShallow: Bool): Water;
 
   /**
     This function returns the water color of the GTA world.
@@ -64,16 +66,15 @@ extern class Water{
     @see https://wiki.multitheftauto.com/wiki/SetWaterLevel
   **/
   @:overload(function(theWater: Water, level: Float): Bool {})
-  @:overload(function(level: Float): Bool {})
   @:overload(function(level: Float, includeWaterFeatures: Bool, includeWaterElements: Bool): Bool {})
-  public static function setLevel(): Bool;
+  public static function setLevel(level: Float): Bool;
 
   /**
     Sets the world position of a corner point of a water area.
 
     @see https://wiki.multitheftauto.com/wiki/SetWaterVertexPosition
   **/
-  public function setVertexPosition(vertexIndex: Int, x: Int, y: Int, z: Float): Bool;
+  public function setVertexPosition(vertexIndex: Int, position: Vector3): Bool;
 
   /**
     This function sets the wave height to the desired value, the default is 0.

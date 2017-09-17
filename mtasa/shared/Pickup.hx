@@ -1,13 +1,14 @@
 package mtasa.shared;
 
-import mtasa.server.Player;
+import mtasa.shared.Player;
 
 @:native("Pickup")
-extern class Pickup extends Element{
+extern class Pickup extends Element
+{
   /**
     This function creates a pickup element, which is placed in the GTA world and can be picked up to retrieve a health, armour or a weapon.
   **/
-  public function new(vector:Vector3, theType: Int, amount_weapon_model: Int, ?respawnTime: Int, ?ammo: Int);
+  public function new(vector: Vector3, theType: Int, amount_weapon_model: Int, ?respawnTime: Int, ?ammo: Int);
 
   /**
     This method retrieves the amount of ammo in a weapon pickup.

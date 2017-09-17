@@ -1,11 +1,13 @@
 package mtasa.server;
+
 /**
   ACL Groups are groups that holds objects such as accounts, and resources which allows them to do some things depending on the permission the group has/holds.
 
   @see https://wiki.multitheftauto.com/wiki/Aclgroup
 **/
 @:native("ACLGroup")
-extern class ACLGroup {
+extern class ACLGroup
+{
   /**
     This function creates a group in the ACL. An ACL group can contain objects like players and resources. They specify who has access to the ACL's in this group.
 

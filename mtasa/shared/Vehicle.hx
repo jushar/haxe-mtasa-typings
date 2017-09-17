@@ -1,7 +1,7 @@
 package mtasa.shared;
 
 import mtasa.shared.MultiReturn;
-import mtasa.server.Player; // todo shared
+import mtasa.shared.Player; // todo shared
 import mtasa.shared.Vector3;
 
 @:native("Vehicle")
@@ -478,13 +478,6 @@ extern class Vehicle extends Element {
     @see https://wiki.multitheftauto.com/wiki/SetVehiclePlateText
   **/
   public function setPlateText(numberplate: String): Bool;
-
-  /**
-    This function changes the properties of a vehicles siren point.
-
-    @see https://wiki.multitheftauto.com/wiki/SetVehicleSirens
-  **/
-  public function addSirens(sirenPoint: Int, position: Vector3, red: Float, green: Float, blue: Float, ?alpha: Float, ?minAlpha: Float): Bool;
 
   /**
     This function changes the state of the sirens on the specified vehicle.

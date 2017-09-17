@@ -5,7 +5,8 @@ import mtasa.shared.ColShape;
 import mtasa.shared.Marker;
 
 @:native("Element")
-extern class Element{
+extern class Element
+{
   /**
     The method allows you to retrieve the position coordinates of an element.
 
