@@ -1,6 +1,8 @@
 package mtasa.client;
 
 import mtasa.shared.MultiReturn;
+import mtasa.shared.Vector2;
+import mtasa.shared.Vector3;
 
 @:native("_G")
 extern class MTA
@@ -78,4 +80,66 @@ extern class MTA
     @see https://wiki.multitheftauto.com/wiki/CreateTrayNotification
   **/
   public static function createTrayNotification(notificationText: String, ?iconType: String, ?useSound: Bool): Bool;
+
+  /**
+    This function retrieves the hex number of a specified color, useful for the dx functions.
+
+    @see https://wiki.multitheftauto.com/wiki/Tocolor
+  **/
+  public static function tocolor(red: Int, green: Int, blue: Int, ?alpha: Int): Int;
+  /**
+    Draws an image on the screen for a single frame.
+
+    @see https://wiki.multitheftauto.com/wiki/DxDrawImage
+  **/
+  public static function dxDrawImage(position: Vector2, size: Vector2, image: Dynamic, ?rotation: Float, ?rotationCenterOffsetX: Float, ?rotationCenterOffsetY: Float, ?color: Int, ?postGUI: Bool): Bool
+
+  /**
+    Differing from dxDrawImage, this function only draws a part of an image on the screen for a single frame.
+
+    @see https://wiki.multitheftauto.com/wiki/DxDrawImageSection
+  **/
+  public static function dxDrawImageSection(position: Vector2, size: Vector2, uv: Vector2, uvSize: Vector2, image: Dynamic, ?rotation: Float, ?rotationCenterOffsetX: Float, ?rotationCenterOffsetY: Float, ?color: Int, ?postGUI: Bool): Bool
+
+  /**
+    This function draws a 2D line across the screen - rendered for one frame.
+
+    @see https://wiki.multitheftauto.com/wiki/DxDrawLine
+  **/
+  public static function dxDrawLine(startPosition: Vector2, endPosition: Vector2, color: Int, ?width: Float, ?postGUI: Bool): Bool;
+
+  /**
+    This function draws a 3D line between two points in the 3D world - rendered for one frame.
+
+    @see https://wiki.multitheftauto.com/wiki/DxDrawLine3D
+  **/
+  public static function dxDrawLine3D(startPosition: Vector3, endPosition: Vector3, color: Int, ?width: Float, ?postGUI: Bool): Bool;
+
+  /**
+    This function draws a 2D rectangle across the screen - rendered for one frame.
+
+    @see https://wiki.multitheftauto.com/wiki/DxDrawRectangle
+  **/
+  public static function dxDrawRectangle(startPosition: Vector2, endPosition: Vector2, color: Int, ?width: Float, ?postGUI: Bool, ?subPixelPositioning: Bool): Bool;
+
+  /**
+    Draws a string of text on the screen for one frame.
+
+    @see https://wiki.multitheftauto.com/wiki/DxDrawText
+  **/
+  public static function dxDrawText(text: String, positionLeftTop: Vector2, ?positionRightBottom: Vector2, ?color: Int, ?scale: Float, ?font: Dynamic, ?alignX: String, ?alignY: Float, ?clip: Bool, ?wordBreak: Bool, ?postGUI: Bool, ?colorCoded: Bool, ?subPixelPositioning: Bool, ?fRotation: Float, ?fRotationCenterX: Float, ?fRotationCenterY: Float): Bool;
+
+  /**
+    This function draws a textured 3D line between two points in the 3D world - rendered for one frame.
+
+    @see https://wiki.multitheftauto.com/wiki/DxDrawMaterialLine3D
+  **/
+  public static function dxDrawMaterialLine3D(start: Vector3, end: Vector3, material: Element, ?width: Float, ?color: Int, ?faceToward: Vector3): Bool;
+
+  /**
+    This function draws a textured 3D line between two points in the 3D world - rendered for one frame.
+
+    @see https://wiki.multitheftauto.com/wiki/DxDrawMaterialSectionLine3D
+  **/
+  public static function dxDrawMaterialSectionLine3D(start: Vector3, end: Vector3, uv: Vector2, uvSize: Vector2, material: Element, ?width: Float, ?color: Int, ?faceToward: Vector3): Bool;
 }

@@ -1,7 +1,8 @@
 package mtasa.client;
 
 import mtasa.shared.MultiReturn;
-import mtasa.client.Element;
+import mtasa.shared.Element;
+import mtasa.shared.Vector3;
 
 @:native("Camera")
 extern class Camera {
