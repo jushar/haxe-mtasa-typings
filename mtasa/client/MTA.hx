@@ -3,7 +3,12 @@ package mtasa.client;
 import mtasa.shared.MultiReturn;
 
 @:native("_G")
-extern class MTA{
+extern class MTA
+{
+  // Global vars
+  public static var guiRoot: Element;
+  public static var localPlayer: Player;
+
   /**
     This function returns an element that corresponds to the game camera.
 
@@ -47,9 +52,30 @@ extern class MTA{
   public static function getCursorAlpha(): Int;
 
   /**
-    Display anything you want in debugscript and console.
+    This function sets the players clipboard text (what appears when you paste with CTRL + V) Note that there is no getClipBoard function for safety reasons.
 
-    @see https://wiki.multitheftauto.com/wiki/iprint
+    @see https://wiki.multitheftauto.com/wiki/SetClipboard
   **/
-  public static function iprint(anything: haxe.extern.Rest<Dynamic>): Bool;
+  public static function setClipboard(theText: String): Bool;
+
+  /**
+    This function allows the window to flash in the Windows taskbar.
+
+    @see https://wiki.multitheftauto.com/wiki/SetWindowFlashing
+  **/
+  public static function setWindowFlashing(shouldFlash: Bool, count: Int): Bool;
+
+  /**
+    This function returns a boolean value whether the client has enabled tray notifications in his settings or not.
+
+    @see https://wiki.multitheftauto.com/wiki/IsTrayNotificationEnabled
+  **/
+  public static function isTrayNotificationEnabled(): Bool;
+
+  /**
+    This functions creates a notification ballon on the desktop.
+    Not working for windows 10
+    @see https://wiki.multitheftauto.com/wiki/CreateTrayNotification
+  **/
+  public static function createTrayNotification(notificationText: String, ?iconType: String, ?useSound: Bool): Bool;
 }
