@@ -384,5 +384,5 @@ extern class MTA
 
     @see https://wiki.multitheftauto.com/wiki/GetJetpackWeaponEnabled
   **/
-  public static funciton getJetpackWeaponEnabled(weapon: String): Bool;
+  public static function getJetpackWeaponEnabled(weapon: String): Bool;
 }

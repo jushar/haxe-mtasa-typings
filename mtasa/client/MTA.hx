@@ -296,4 +296,11 @@ extern class MTA
     @see https://wiki.multitheftauto.com/wiki/CreateSWATRope
   **/
   public static function createSWATRope(position: Vector3, duration: Int): Bool;
+
+  /**
+    Creates a patch of fire that will spread a bit and die out after a while. Because it's a client side only function, other players won't see it, so custom events or custom objects will be needed to make a fire visible to some players.
+
+    @see https://wiki.multitheftauto.com/wiki/CreateFire
+  **/
+  public static function createFire(position: Vector3, size: Float): Bool;
 }
