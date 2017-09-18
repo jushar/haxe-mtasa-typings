@@ -337,4 +337,405 @@ extern class MTA
     @see https://wiki.multitheftauto.com/wiki/SetDevelopmentMode
   **/
   public static function setDevelopmentMode(enable: Bool, ?enableWeb: Bool): Bool;
+
+  /**
+    Gets whether the traffic lights are currently locked or not.
+
+    @see https://wiki.multitheftauto.com/wiki/AreTrafficLightsLocked
+  **/
+  public static function areTrafficLightsLocked(): Bool;
+
+  /**
+    This function will tell you if clouds are enabled or disabled.
+
+    @see https://wiki.multitheftauto.com/wiki/GetCloudsEnabled
+  **/
+  public static function getCloudsEnabled(): Bool;
+
+  /**
+    This function gets the current game speed value.
+
+    @see https://wiki.multitheftauto.com/wiki/GetGameSpeed
+  **/
+  public static function getGameSpeed(): Float;
+
+  /**
+    This function returns the current gravity level for the context in which it is called (server or client).
+
+    @see https://wiki.multitheftauto.com/wiki/GetGravity
+  **/
+  public static function getGravity(): Float;
+
+  /**
+    This function will return the current heat haze effect settings.
+
+    @see https://wiki.multitheftauto.com/wiki/GetHeatHaze
+  **/
+  public static function getHeatHaze(): HeatHaze;
+
+  /**
+    This function gets the maximum height at which your jetpack can fly without failing to go higher.
+
+    @see https://wiki.multitheftauto.com/wiki/GetJetpackMaxHeight
+  **/
+  public static function getJetpackMaxHeight(): Float;
+
+  /**
+    This function returns the maximum velocity at which aircrafts could fly.
+
+    @see https://wiki.multitheftauto.com/wiki/GetAircraftMaxVelocity
+  **/
+  public static function getAircraftMaxVelocity(): Float;
+
+  /**
+    This function will tell you what is the current render distance.
+
+    @see https://wiki.multitheftauto.com/wiki/GetFarClipDistance
+  **/
+  public static function getFarClipDistance(): Float;
+
+  /**
+    Tells you how long an ingame minute takes in real-world milliseconds. The default GTA value is 1000.
+
+    @see https://wiki.multitheftauto.com/wiki/GetMinuteDuration
+  **/
+  public static function getMinuteDuration(): Int;
+
+  /**
+    This function will return the current sky color.
+
+    @see https://wiki.multitheftauto.com/wiki/GetSkyGradient
+  **/
+  public static function getSkyGradient(): SkyGradient;
+
+  /**
+    This function is used to get the current time in the game.
+
+    @see https://wiki.multitheftauto.com/wiki/GetTime
+  **/
+  public static function getTime(): GameTime;
+
+  /**
+    Gets the current traffic light state. This state controls the traffic light colors. For instance, state 1 will cause the north and south traffic lights to be amber, and the ones left and east will turn red.
+
+    @see https://wiki.multitheftauto.com/wiki/GetTrafficLightState
+  **/
+  public static function getTrafficLightState(): Int;
+
+  /**
+    This function returns the current Weather ID.
+
+    @see https://wiki.multitheftauto.com/wiki/GetWeather
+  **/
+  public static function getWeather(): Weather;
+
+  /**
+    This function allows you to retrieve the zone name of a certain location.
+
+    @see https://wiki.multitheftauto.com/wiki/GetZoneName
+  **/
+  public static function getZoneName(position: Vector3, ?citiesOnly: Bool): String;
+
+  /**
+    This function checks whether or not a specific garage door is open.
+
+    @see https://wiki.multitheftauto.com/wiki/IsGarageOpen
+  **/
+  public static function isGarageOpen(garageID: Int): Bool;
+
+  /**
+    This function allows restoring of a changed sky gradient as a result of setSkyGradient.
+
+    @see https://wiki.multitheftauto.com/wiki/ResetSkyGradient
+  **/
+  public static function resetSkyGradient(): Bool;
+
+  /**
+    This function restores the default heat haze.
+
+    @see https://wiki.multitheftauto.com/wiki/ResetHeatHaze
+  **/
+  public static function resetHeatHaze(): Bool;
+
+  /**
+    This function will enable or disable clouds.
+
+    @see https://wiki.multitheftauto.com/wiki/SetCloudsEnabled
+  **/
+  public static function setCloudsEnabled(enabled: Bool): Bool;
+
+  /**
+    This function sets the game speed to the given value.
+
+    @see https://wiki.multitheftauto.com/wiki/SetGameSpeed
+  **/
+  public static function setGameSpeed(speed: Float): Bool;
+
+  /**
+    This function will tell you what is the current fog render distance.
+
+    @see https://wiki.multitheftauto.com/wiki/GetFogDistance
+  **/
+  public static function getFogDistance(): Float;
+
+  /**
+    This function sets the server's gravity level.
+
+    @see https://wiki.multitheftauto.com/wiki/SetGravity
+  **/
+  public static function setGravity(level: Float): Bool;
+
+  /**
+    This function changes the heat haze effect.
+
+    @see https://wiki.multitheftauto.com/wiki/SetHeatHaze
+  **/
+  public static function setHeatHaze(intensity: Int, ?randomShift: Int, ?speedMin: Int, ?speedMax: Int, ?scanSizeX: Int, ?scanSizeY: Int, ?renderSizeX: Int, ?renderSizeY: Int, ?bShowInside: Bool): Bool;
+
+  /**
+    Sets the real-world duration of an ingame minute. The GTA default is 1000.
+
+    @see https://wiki.multitheftauto.com/wiki/SetMinuteDuration
+  **/
+  public static function setMinuteDuration(milliseconds: Int): Bool;
+
+  /**
+    This function changes the sky color to a two-color gradient.
+
+    @see https://wiki.multitheftauto.com/wiki/SetSkyGradient
+  **/
+  public static function setSkyGradient(?topRed: Int, ?topGreen: Int, ?topBlue: Int, ?bottomRed: Int, ?bottomGreen: Int, ?bottomBlue: Int): Bool;
+
+  /**
+    This function sets the current GTA time to the given time.
+
+    @see https://wiki.multitheftauto.com/wiki/SetTime
+  **/
+  public static function setTime(hour: Int, minute: Int): Bool;
+
+  /**
+    Sets the current traffic light state.
+
+    @see https://wiki.multitheftauto.com/wiki/SetTrafficLightState
+  **/
+  @:overload(function(colorNS: String, colorEW: String): Bool {})
+  @:overload(function(state: String): Bool {})
+  public static function setTrafficLightState(state: Int): Bool;
+
+  /**
+    Toggles whether you want the traffic lights to be locked.
+
+    @see https://wiki.multitheftauto.com/wiki/SetTrafficLightsLocked
+  **/
+  public static function setTrafficLightsLocked(toggle: Bool): Bool;
+
+  /**
+    This function will change the current weather to another in a smooth manner, over the period of 2 in-game hours (unlike setWeather, which sets a new weather instantly).
+
+    @see https://wiki.multitheftauto.com/wiki/SetWeatherBlended
+  **/
+  public static function setWeatherBlended(weatherID: Int): Bool;
+
+  /**
+    This function disables or enables the ambient sounds played by GTA in most interiors, like restaurants, casinos, clubs, houses, etc.
+
+    @see https://wiki.multitheftauto.com/wiki/SetInteriorSoundsEnabled
+  **/
+  public static function setInteriorSoundsEnabled(enabled: Bool): Bool;
+
+  /**
+    This function sets the rain level to any weather available in GTA.
+
+    @see https://wiki.multitheftauto.com/wiki/SetRainLevel
+  **/
+  public static function setRainLevel(level: Float): Bool;
+
+  /**
+    This function is used to get the current rain level.
+
+    @see https://wiki.multitheftauto.com/wiki/GetRainLevel
+  **/
+  public static function getRainLevel(): Float;
+
+  /**
+    This function resets the rain level of the current weather to its default.
+
+    @see https://wiki.multitheftauto.com/wiki/ResetRainLevel
+  **/
+  public static function resetRainLevel(): Bool;
+
+  /**
+    This function is used to set the size of the sun.
+
+    @see https://wiki.multitheftauto.com/wiki/SetSunSize
+  **/
+  public static function setSunSize(size: Int): Bool;
+
+  /**
+    This function is used to get the size of the sun.
+
+    @see https://wiki.multitheftauto.com/wiki/GetSunSize
+  **/
+  public static function getSunSize(): Float;
+
+  /**
+    This function is used to reset the size of the sun to its normal size.
+
+    @see https://wiki.multitheftauto.com/wiki/ResetSunSize
+  **/
+  public static function resetSunSize(): Bool;
+
+  /**
+    This function is used to set the color of the sun.
+
+    @see https://wiki.multitheftauto.com/wiki/SetSunColor
+  **/
+  public static function setSunColor(aRed: Int, aGreen: Int, aBlue: Int, bRed: Int, bGreen: Int, bBlue: Int): Bool;
+
+  /**
+    This function is used to get the color of the sun.
+
+    @see https://wiki.multitheftauto.com/wiki/GetSunColor
+  **/
+  public static function getSunColor(): SunColor;
+
+  /**
+    This function is used to reset the color of the sun to its normal color.
+
+    @see https://wiki.multitheftauto.com/wiki/ResetSunColor
+  **/
+  public static function resetSunColor(): Bool;
+
+  /**
+    This function changes the wind velocity.
+
+    @see https://wiki.multitheftauto.com/wiki/SetWindVelocity
+  **/
+  public static function setWindVelocity(velocity: Vector3): Bool;
+
+  /**
+    This function gets the wind velocity in San Andreas.
+
+    @see https://wiki.multitheftauto.com/wiki/GetWindVelocity
+  **/
+  public static function getWindVelocity(): Vector3;
+
+  /**
+    This function resets the wind velocity in San Andreas to its default state.
+
+    @see https://wiki.multitheftauto.com/wiki/ResetWindVelocity
+  **/
+  public static function resetWindVelocity(): Bool;
+
+  /**
+    This function returns the moon size.
+
+    @see https://wiki.multitheftauto.com/wiki/GetMoonSize
+  **/
+  public static function getMoonSize(): Int;
+
+  /**
+    This function gets the distance from the camera at which the world starts rendering.
+
+    @see https://wiki.multitheftauto.com/wiki/GetNearClipDistance
+  **/
+  public static function getNearClipDistance(): Float;
+
+  /**
+    This function is used to get "occlusions enabled" state.
+
+    @see https://wiki.multitheftauto.com/wiki/GetOcclusionsEnabled
+  **/
+  public static function getOcclusionsEnabled(): Bool;
+
+  /**
+    This function resets the far clip distance to its default state.
+
+    @see https://wiki.multitheftauto.com/wiki/ResetFarClipDistance
+  **/
+  public static function resetFarClipDistance(): Bool;
+
+  /**
+    This function resets the fog render distance to its default state.
+
+    @see https://wiki.multitheftauto.com/wiki/ResetFogDistance
+  **/
+  public static function resetFogDistance(): Bool;
+
+  /**
+    This function is used to set the distance of render. Areas beyond the specified distance will not be rendered.
+
+    @see https://wiki.multitheftauto.com/wiki/SetFarClipDistance
+  **/
+  public static function setFarClipDistance(distance: Float): Bool;
+
+  /**
+    This function is used to remove a world object.
+
+    @see https://wiki.multitheftauto.com/wiki/RemoveWorldModel
+  **/
+  public static function removeWorldModel(modelID: Int, radius: Float, position: Vector3, ?interior: Int): Bool;
+
+  /**
+    This function is used to reset the size of the moon to its normal size.
+
+    @see https://wiki.multitheftauto.com/wiki/ResetMoonSize
+  **/
+  public static function resetMoonSize(): Bool;
+
+  /**
+    This function allows restoring of world object,which was removed with RemoveWorldModel.
+
+    @see https://wiki.multitheftauto.com/wiki/RestoreWorldModel
+  **/
+  public static function restoreWorldModel(modelID: Int, radius: Float, position: Vector3, ?interior: Int;): Bool;
+
+  /**
+    This function allows restoring of all world objects,which were removed with RemoveWorldModel.
+
+    @see https://wiki.multitheftauto.com/wiki/RestoreAllWorldModels
+  **/
+  public static function restoreAllWorldModels(): Bool;
+
+  /**
+    This function changes the maximum flying height of aircraft.
+
+    @see https://wiki.multitheftauto.com/wiki/SetAircraftMaxHeight
+  **/
+  public static function setAircraftMaxHeight(height: Float): Bool;
+
+  /**
+    This function sets the maximum velocity at which aircrafts could fly. Using this function server-side will overwrite the value that was previously set client-side.
+
+    @see https://wiki.multitheftauto.com/wiki/SetAircraftMaxVelocity
+  **/
+  public static function setAircraftMaxVelocity(velocity: Float): Bool;
+
+  /**
+    This function allows you to disable some background sound effects.
+
+    @see https://wiki.multitheftauto.com/wiki/SetAmbientSoundEnabled
+  **/
+  public static function setAmbientSoundEnabled(theType: String, enable: Bool): Bool;
+
+  /**
+    This function is used to enable or disable occlusions.
+
+    @see https://wiki.multitheftauto.com/wiki/SetOcclusionsEnabled
+  **/
+  public static function setOcclusionsEnabled(enabled: Bool): Bool;
+
+  /**
+    This function sets the moon size.
+
+    @see https://wiki.multitheftauto.com/wiki/SetMoonSize
+  **/
+  public static function setMoonSize(size: Int): Bool;
+
+  /**
+    This function changes the maximum flying height of jetpack.
+
+    @see https://wiki.multitheftauto.com/wiki/SetJetpackMaxHeight
+  **/
+  public static function setJetpackMaxHeight(height: Float): Bool;
 }

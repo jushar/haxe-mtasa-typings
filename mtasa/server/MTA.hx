@@ -371,4 +371,18 @@ extern class MTA
   **/
   @:overload(function(weaponName: String, weaponSkill: String, property: String, theValue: Float): Bool {})
   public static function setWeaponProperty(weaponID: Int, weaponSkill: String, property: String, theValue: Float): Bool;
+
+  /**
+    This function sets a weapon usable while using the Jetpack.
+
+    @see https://wiki.multitheftauto.com/wiki/SetJetpackWeaponEnabled
+  **/
+  public static function setJetpackWeaponEnabled(weapon: String, enabled: Bool): Bool;
+
+  /**
+    This function checks if a weapon is usable while on a Jetpack.
+
+    @see https://wiki.multitheftauto.com/wiki/GetJetpackWeaponEnabled
+  **/
+  public static funciton getJetpackWeaponEnabled(weapon: String): Bool;
 }

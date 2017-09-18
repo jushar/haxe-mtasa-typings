@@ -42,7 +42,7 @@ package mtasa.shared;
   var z: Float;
 }
 
-@:multiReturn extern class Anything{  // mayby haxe.extern.Rest<Dynamic> could be better then arg1,arg2,...
+@:multiReturn extern class Anything{  // mayby haxe.extern.Rest<Dynamic> could be better then arg1,arg2,... TODO
   var arg1: Dynamic;
   var arg2: Dynamic;
   var arg3: Dynamic;
@@ -113,4 +113,89 @@ package mtasa.shared;
   var rearLeft: Int;
   var frontRight: Int;
   var rearRight: Int;
+}
+
+@:multiReturn extern class HeatHaze{
+  var intensity: Int;
+  var randomShift: Int;
+  var speedMin: Int;
+  var speedMax: Int;
+  var scanSizeX: Int;
+  var scanSizeY: Int;
+  var renderSizeX: Int;
+  var renderSizeY: Int;
+  var bShowInside: Bool;
+}
+
+@:multiReturn extern class SkyGradient{
+  var r1: Int;
+  var g1: Int;
+  var b1: Int;
+  var r2: Int;
+  var g2: Int;
+  var b2: Int;
+}
+
+@:multiReturn extern class GameTime{
+  var hours: Int;
+  var minutes: Int;
+}
+
+@:multiReturn extern class VehicleLodDistance{
+  var other: Int;
+  var trainsPlanes: Int;
+}
+
+@:multiReturn extern class Weather{
+  var weather: Int;
+  var blend: Int;
+}
+
+@:multiReturn extern class SunColor{
+  var aRed: Int;
+  var aGreen: Int;
+  var aBlue: Int;
+  var bRed: Int;
+  var bGreen: Int;
+  var bBlue: Int;
+}
+
+@:multiReturn extern class BoundingBoxGarage{
+  var westernX: Float;
+  var easternX: Float;
+  var southernY: Float;
+  var northernY: Float;
+}
+
+@:multiReturn extern class Position3d{
+  var x: Float;
+  var y: Float;
+  var z: Float;
+}
+
+@:multiReturn extern class Position2d{
+  var x: Float;
+  var y: Float;
+}
+
+@:multiReturn extern class ProcessLine{
+  var hit: Bool;
+  var hitX: Float;
+  var hitY: Float;
+  var hitZ: Float;
+  var hitElement: Element;
+  var normalX: Float;
+  var normalY: Float;
+  var normalZ: Float;
+  var material: Int;
+  var lighting: Float;
+  var piece: Int;
+  var worldModelID: Int;
+  var worldModelPositionX: Float;
+  var worldModelPositionY: Float;
+  var worldModelPositionZ: Float;
+  var worldModelRotationX: Float;
+  var worldModelRotationY: Float;
+  var worldModelRotationZ: Float;
+  var worldLODModelID: Int;
 }

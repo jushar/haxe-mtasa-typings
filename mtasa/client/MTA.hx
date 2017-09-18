@@ -142,4 +142,158 @@ extern class MTA
     @see https://wiki.multitheftauto.com/wiki/DxDrawMaterialSectionLine3D
   **/
   public static function dxDrawMaterialSectionLine3D(start: Vector3, end: Vector3, uv: Vector2, uvSize: Vector2, material: Element, ?width: Float, ?color: Int, ?faceToward: Vector3): Bool;
+
+  /**
+    This function will tell you if the birds are enabled or disabled.
+
+    @see https://wiki.multitheftauto.com/wiki/GetBirdsEnabled
+  **/
+  public static function getBirdsEnabled(): Bool;
+
+  /**
+    Returns the distance of vehicles LOD.
+
+    @see https://wiki.multitheftauto.com/wiki/GetVehiclesLODDistance
+  **/
+  public static function getVehiclesLODDistance(): VehicleLodDistance;
+
+  /**
+    This function checks to see if the music played by default in clubs is disabled or not.
+
+    @see https://wiki.multitheftauto.com/wiki/GetInteriorSoundsEnabled
+  **/
+  public static function getInteriorSoundsEnabled(): Bool;
+
+  /**
+    This function outputs the bounding box of a garage.
+
+    @see https://wiki.multitheftauto.com/wiki/GetGarageBoundingBox
+  **/
+  public static function getGarageBoundingBox(garageID: Int): BoundingBox;
+
+  /**
+    This function outputs X, Y and Z position of given garage.
+
+    @see https://wiki.multitheftauto.com/wiki/GetGaragePosition
+  **/
+  public static function getGaragePosition(garageID: Int): Vector3;
+
+  /**
+    This function gets the Z level of the highest ground below a point.
+
+    @see https://wiki.multitheftauto.com/wiki/GetGroundPosition
+  **/
+  public static function getGroundPosition(position: Vector3): Float;
+
+  /**
+    This function will tell you if interior furniture are enabled or disabled in a specified room ID.
+
+    @see https://wiki.multitheftauto.com/wiki/GetInteriorFurnitureEnabled
+  **/
+  public static function getInteriorFurnitureEnabled(roomID: Int): Bool;
+
+  /**
+    This function allows you to retrieve the world position corresponding to a 2D position on the screen, at a certain depth.
+
+    @see https://wiki.multitheftauto.com/wiki/GetWorldFromScreenPosition
+  **/
+  public static function getWorldFromScreenPosition(position: Vector2, depth: Float): Position3d;
+
+  /**
+    This function allows you to check if some background sound effects are enabled.
+
+    @see https://wiki.multitheftauto.com/wiki/IsAmbientSoundEnabled
+  **/
+  public static function isAmbientSoundEnabled(theType: String): Bool;
+
+  /**
+    This function allows you to check if certain world sound effects have not been disabled by setWorldSoundEnabled
+
+    @see https://wiki.multitheftauto.com/wiki/IsWorldSoundEnabled
+  **/
+  public static function isWorldSoundEnabled(group: Int, ?index: Int): Bool;
+
+  /**
+    Checks if a special world property (cheat) is enabled or not.
+
+    @see https://wiki.multitheftauto.com/wiki/IsWorldSpecialPropertyEnabled
+  **/
+  public static function isWorldSpecialPropertyEnabled(propname: String): Bool;
+
+  /**
+    This function casts a ray between two points in the world, and tells you information about the point that was hit, if any.
+
+    @see https://wiki.multitheftauto.com/wiki/ProcessLineOfSight
+  **/
+  public static function processLineOfSight(start: Vector3, end: Vector3, ?checkBuildings: Bool, ?checkVehicles: Bool, ?checkPeds: Bool, ?checkObjects: Bool, ?checkDummies: Bool, ?seeThroughStuff: Bool, ?ignoreSomeObjectsForCamera: Bool, ?shootThroughStuff: Bool, ?ignoredElement: Bool, ?includeWorldModelInformation: Bool, ?bIncludeCarTyres: Bool): ProcessLine;
+
+  /**
+    This function checks if there are obstacles between two points of the game world, optionally ignoring certain kinds of elements. Use processLineOfSight if you want more information about what the ray hits.
+
+    @see https://wiki.multitheftauto.com/wiki/IsLineOfSightClear
+  **/
+  public static function isLineOfSightClear(start: Vector3, end: Vector3, ?checkBuildings: Bool, ?checkVehicles: Bool, ?checkPeds: Bool, ?checkObjects: Bool, ?checkDummies: Bool, ?seeThroughStuff: Bool, ?ignoreSomeObjectsForCamera: Bool, ?shootThroughStuff: Bool, ?ignoredElement: Bool): Bool;
+  /**
+    This function is used to reset the background sounds to the default setting.
+
+    @see https://wiki.multitheftauto.com/wiki/ResetAmbientSounds
+  **/
+  public static function resetAmbientSounds(): Bool;
+
+  /**
+    Resets the distance of vehicles LOD to default.
+
+    @see https://wiki.multitheftauto.com/wiki/ResetVehiclesLODDistance
+  **/
+  public static function resetVehiclesLODDistance(): Bool;
+
+  /**
+    This function is used to reset the world sounds to the default setting.
+
+    @see https://wiki.multitheftauto.com/wiki/ResetWorldSounds
+  **/
+  public static function resetWorldSounds(): Bool;
+
+  /**
+    This function allows you to disable the flying birds.
+
+    @see https://wiki.multitheftauto.com/wiki/SetBirdsEnabled
+  **/
+  public static function setBirdsEnabled(enabled: Bool): Bool;
+
+  /**
+    This function toggles furniture generation in interiors with the specified room ID.
+
+    @see https://wiki.multitheftauto.com/wiki/SetInteriorFurnitureEnabled
+  **/
+  public static function setInteriorFurnitureEnabled(roomID: Int, enabled: Bool): Bool;
+
+  /**
+    This function sets the distance from the camera at which the world starts rendering.
+
+    @see https://wiki.multitheftauto.com/wiki/SetNearClipDistance
+  **/
+  public static function setNearClipDistance(distance: Float): Bool;
+
+  /**
+    This function allows you to disable world sounds.
+
+    @see https://wiki.multitheftauto.com/wiki/SetWorldSoundEnabled
+  **/
+  @:overload(function(group: Int, index: Int, enable: Bool): Bool {})
+  public static function setWorldSoundEnabled(group: Int, enable: Bool): Bool;
+
+  /**
+    This function checks to see if a line between two points collides with the water.
+
+    @see https://wiki.multitheftauto.com/wiki/TestLineAgainstWater
+  **/
+  public static function testLineAgainstWater(start: Vector3, end: Vector3): Position3d;
+
+  /**
+    Creates a SWAT rope like that of the rope in single player used by SWAT Teams abseiling from the Police Maverick.
+
+    @see https://wiki.multitheftauto.com/wiki/CreateSWATRope
+  **/
+  public static function createSWATRope(position: Vector3, duration: Int): Bool;
 }
