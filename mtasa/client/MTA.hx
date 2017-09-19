@@ -92,14 +92,14 @@ extern class MTA
 
     @see https://wiki.multitheftauto.com/wiki/DxDrawImage
   **/
-  public static function dxDrawImage(position: Vector2, size: Vector2, image: Dynamic, ?rotation: Float, ?rotationCenterOffsetX: Float, ?rotationCenterOffsetY: Float, ?color: Int, ?postGUI: Bool): Bool
+  public static function dxDrawImage(position: Vector2, size: Vector2, image: Dynamic, ?rotation: Float, ?rotationCenterOffsetX: Float, ?rotationCenterOffsetY: Float, ?color: Int, ?postGUI: Bool): Bool;
 
   /**
     Differing from dxDrawImage, this function only draws a part of an image on the screen for a single frame.
 
     @see https://wiki.multitheftauto.com/wiki/DxDrawImageSection
   **/
-  public static function dxDrawImageSection(position: Vector2, size: Vector2, uv: Vector2, uvSize: Vector2, image: Dynamic, ?rotation: Float, ?rotationCenterOffsetX: Float, ?rotationCenterOffsetY: Float, ?color: Int, ?postGUI: Bool): Bool
+  public static function dxDrawImageSection(position: Vector2, size: Vector2, uv: Vector2, uvSize: Vector2, image: Dynamic, ?rotation: Float, ?rotationCenterOffsetX: Float, ?rotationCenterOffsetY: Float, ?color: Int, ?postGUI: Bool): Bool;
 
   /**
     This function draws a 2D line across the screen - rendered for one frame.
