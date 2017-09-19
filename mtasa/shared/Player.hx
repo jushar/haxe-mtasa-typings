@@ -47,7 +47,7 @@ extern class Player extends Element
     @see https://wiki.multitheftauto.com/wiki/SetPlayerNametagColor
   **/
   @:overload(function(Reset: Bool): Bool {})
-  public function setNametagColor((Red: Int, Green: Int, Blue: Int): Bool;
+  public function setNametagColor(Red: Int, Green: Int, Blue: Int): Bool;
 
   /**
     This method allows you to set whether a player's nametag visibility both clientside and serverside

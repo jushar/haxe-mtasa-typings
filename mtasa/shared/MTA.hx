@@ -688,7 +688,7 @@ extern class MTA
 
     @see https://wiki.multitheftauto.com/wiki/RestoreWorldModel
   **/
-  public static function restoreWorldModel(modelID: Int, radius: Float, position: Vector3, ?interior: Int;): Bool;
+  public static function restoreWorldModel(modelID: Int, radius: Float, position: Vector3, ?interior: Int): Bool;
 
   /**
     This function allows restoring of all world objects,which were removed with RemoveWorldModel.
