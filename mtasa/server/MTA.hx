@@ -385,4 +385,18 @@ extern class MTA
     @see https://wiki.multitheftauto.com/wiki/GetJetpackWeaponEnabled
   **/
   public static function getJetpackWeaponEnabled(weapon: String): Bool;
+
+  /**
+    This function returns all the currently loaded modules of the server.
+
+    @see https://wiki.multitheftauto.com/wiki/GetLoadedModules
+  **/
+  public static function getLoadedModules(): lua.Table<Int,String>;
+
+  /**
+    This function returns information about the specified module.
+
+    @see https://wiki.multitheftauto.com/wiki/GetModuleInfo
+  **/
+  public static function getModuleInfo(moduleName: String): lua.Table<String,String>;
 }

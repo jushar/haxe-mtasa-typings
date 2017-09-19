@@ -738,4 +738,12 @@ extern class MTA
     @see https://wiki.multitheftauto.com/wiki/SetJetpackMaxHeight
   **/
   public static function setJetpackMaxHeight(height: Float): Bool;
+
+  /**
+    This function can be used to detonate a players satchels.
+    @param thePlayer serverside only.
+
+    @see https://wiki.multitheftauto.com/wiki/DetonateSatchels
+  **/
+  public static function detonateSatchels(thePlayer: Player): Bool;
 }
