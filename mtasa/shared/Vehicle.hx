@@ -5,7 +5,8 @@ import mtasa.shared.Player; // todo shared
 import mtasa.shared.Vector3;
 
 @:native("Vehicle")
-extern class Vehicle extends Element {
+extern class Vehicle extends Element
+{
   /**
     This function creates a vehicle at the specified location.
     @param numberplate lenght between 0 and 8 chars.
