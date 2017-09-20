@@ -746,4 +746,13 @@ extern class MTA
     @see https://wiki.multitheftauto.com/wiki/DetonateSatchels
   **/
   public static function detonateSatchels(thePlayer: Player): Bool;
+
+  /**
+    This function checks if a value is an element or not.
+
+    @see https://wiki.multitheftauto.com/wiki/IsElement
+  **/
+  public static function isElement(theElement: Element): Bool;
+
+  untyped function c(cls,fname: String,...){return _hx_exports[cls][fname](...)};
 }

@@ -199,3 +199,9 @@ package mtasa.shared;
   var worldModelRotationZ: Float;
   var worldLODModelID: Int;
 }
+
+@:multiReturn extern class DatabaseResult{
+  var result: lua.Table<Int,Dynamic>;
+  var num_affected_rows: Int;
+  var last_insert_id: Int;
+}
