@@ -365,4 +365,11 @@ extern class Element
     @see https://wiki.multitheftauto.com/wiki/SetLowLODElement
   **/
   public function setLowLOD(lowLODElement: Element): Bool;
+
+  /**
+    This function checks whether MTA has frozen an element because it is above map objects which are still loading or not.
+
+    @see https://wiki.multitheftauto.com/wiki/IsElementWaitingForGroundToLoad
+  **/
+  public function isWaitingForGroundToLoad(): Bool;
 }

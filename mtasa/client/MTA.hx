@@ -303,4 +303,27 @@ extern class MTA
     @see https://wiki.multitheftauto.com/wiki/CreateFire
   **/
   public static function createFire(position: Vector3, size: Float): Bool;
+
+  /**
+    This function changes the water rendering order.
+
+    @see https://wiki.multitheftauto.com/wiki/SetWaterDrawnLast
+  **/
+  public static function setWaterDrawnLast(enabled: Bool): Bool
+
+  /**
+    This function allows you to retrieve the water level from a certain location. The water level is 0 in most places though it can vary (e.g. it's higher near the dam).
+
+    @see https://wiki.multitheftauto.com/wiki/GetWaterLevel
+  **/
+  @:overload(function(position: Vector3, ?checkWaves: Bool): Float {})
+  public static function getWaterLevel(theWater: Water): Float;
+
+  /**
+    This sets the analog control state of a control for the local player.
+
+    @see https://wiki.multitheftauto.com/wiki/SetAnalogControlState
+  **/
+  public static function setAnalogControlState(controlName: String, state: Float): Bool;
+
 }

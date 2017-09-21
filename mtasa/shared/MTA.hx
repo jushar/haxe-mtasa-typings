@@ -172,7 +172,7 @@ extern class MTA
     @see https://wiki.multitheftauto.com/wiki/GetWeaponNameFromID
   **/
   public static function getWeaponNameFromID(ID: Int): String;
-  
+
   /**
     This function outputs scripting debug messages, which can be read by enabling the debug textbox. The debug display level can then be set so that info or warning messages get filtered out.
 
@@ -760,4 +760,12 @@ extern class MTA
     @see https://wiki.multitheftauto.com/wiki/IsElement
   **/
   public static function isElement(theElement: Element): Bool;
+
+  /**
+    This function checks if player's chat is visible.
+
+    @see https://wiki.multitheftauto.com/wiki/IsChatVisible
+  **/
+  public static function isChatVisible(): Bool;
+
 }

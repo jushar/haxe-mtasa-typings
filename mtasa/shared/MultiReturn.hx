@@ -205,3 +205,20 @@ package mtasa.shared;
   var num_affected_rows: Int;
   var last_insert_id: Int;
 }
+
+@:multiReturn extern class Animation{
+  var block: String;
+  var name: String;
+}
+
+@:multiReturn extern class PedTask{
+  var task1: String;
+  var task2: String;
+  var task3: String;
+  var task4: String;
+}
+
+@:multiReturn extern class PedVoice{
+  var type: String;
+  var name: String;
+}
