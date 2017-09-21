@@ -8,7 +8,7 @@ import mtasa.shared.Vector3;
   @see https://wiki.multitheftauto.com/wiki/Element/Effect
 **/
 @:native("Effect")
-extern class Effect extends Element
+extern class Effect extends mtasa.shared.Element
 {
   /**
     Creates an effect on specified position.

@@ -1,7 +1,7 @@
 package mtasa.client;
 
 @:native("Ped")
-extern class Ped extends Player
+extern class Ped extends mtasa.shared.Player
 {
   /**
     Sets an analog state of a specified ped's control, as if they pressed or released it.

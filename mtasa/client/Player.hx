@@ -1,7 +1,7 @@
 package mtasa.client;
 
 @:native("Player")
-extern class Player extends Element
+extern class Player extends mtasa.shared.Element
 {
   /**
     This method is used to forcefully show a player's radar map.

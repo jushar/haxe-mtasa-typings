@@ -1,4 +1,4 @@
-package mtasa.server;
+package mtasa.shared;
 
 import mtasa.shared.Vector3;
 import mtasa.shared.Vector2;
@@ -8,7 +8,7 @@ import mtasa.shared.Vector2;
   @see https://wiki.multitheftauto.com/wiki/Element/Object
 **/
 @:native("Object")
-extern class Object extends Element
+extern class Object extends mtasa.shared.Element
 {
   /**
     Creates an object in the GTA world.
