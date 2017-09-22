@@ -91,5 +91,5 @@ extern class Camera {
       thermalvision: Infrared camera
     @see https://wiki.multitheftauto.com/wiki/SetCameraGoggleEffect
   **/
-  public static function setGoggleEffect(goggleEffect: String): Bool
+  public static function setGoggleEffect(goggleEffect: String): Bool;
 }

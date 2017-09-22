@@ -3,6 +3,7 @@ package mtasa.client;
 import mtasa.shared.MultiReturn;
 import mtasa.shared.Vector2;
 import mtasa.shared.Vector3;
+import mtasa.shared.Water;
 
 @:native("_G")
 extern class MTA
@@ -309,7 +310,7 @@ extern class MTA
 
     @see https://wiki.multitheftauto.com/wiki/SetWaterDrawnLast
   **/
-  public static function setWaterDrawnLast(enabled: Bool): Bool
+  public static function setWaterDrawnLast(enabled: Bool): Bool;
 
   /**
     This function allows you to retrieve the water level from a certain location. The water level is 0 in most places though it can vary (e.g. it's higher near the dam).
@@ -325,5 +326,4 @@ extern class MTA
     @see https://wiki.multitheftauto.com/wiki/SetAnalogControlState
   **/
   public static function setAnalogControlState(controlName: String, state: Float): Bool;
-
 }
