@@ -6,6 +6,7 @@ The vector2 class representsa two-dimensional vector.
 @see https://wiki.multitheftauto.com/wiki/Vector/Vector2
 **/
 @:native("Vector2")
+@:op(A+B)
 extern class Vector2 {
   public var x: Float;
   public var y: Float;

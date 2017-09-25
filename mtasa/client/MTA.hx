@@ -121,7 +121,7 @@ extern class MTA
 
     @see https://wiki.multitheftauto.com/wiki/DxDrawRectangle
   **/
-  public static function dxDrawRectangle(startPosition: Vector2, endPosition: Vector2, color: Int, ?width: Float, ?postGUI: Bool, ?subPixelPositioning: Bool): Bool;
+  public static function dxDrawRectangle(startPosition: Vector2, endPosition: Vector2, color: Int, ?postGUI: Bool, ?subPixelPositioning: Bool): Bool;
 
   /**
     Draws a string of text on the screen for one frame.
@@ -326,4 +326,11 @@ extern class MTA
     @see https://wiki.multitheftauto.com/wiki/SetAnalogControlState
   **/
   public static function setAnalogControlState(controlName: String, state: Float): Bool;
+  
+  /**
+    This function retrieves the local screen size according to the resolution they are using.
+    
+    @see https://wiki.multitheftauto.com/wiki/GuiGetScreenSize
+  **/
+  public static function guiGetScreenSize(): ScreenSize;
 }

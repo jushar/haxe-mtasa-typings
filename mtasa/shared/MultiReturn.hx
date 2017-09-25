@@ -177,6 +177,10 @@ package mtasa.shared;
   var x: Float;
   var y: Float;
 }
+@:multiReturn extern class ScreenSize{
+  var x: Int;
+  var y: Int;
+}
 
 @:multiReturn extern class ProcessLine{
   var hit: Bool;

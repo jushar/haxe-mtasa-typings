@@ -25,13 +25,6 @@ extern class Player extends mtasa.shared.Element
   public static function getMoney(): Int;
 
   /**
-    This method returns a string containing the name of the specified player.
-
-    @see https://wiki.multitheftauto.com/wiki/GetPlayerName
-  **/
-  public static function getName(): String;
-
-  /**
     This method gets a player's current wanted level. The wanted level is indicated by the amount of stars a player has on the GTA HUD.
 
     @see https://wiki.multitheftauto.com/wiki/GetPlayerWantedLevel

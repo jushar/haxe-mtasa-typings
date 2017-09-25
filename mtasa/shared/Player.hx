@@ -4,7 +4,7 @@ import mtasa.shared.MultiReturn;
 import mtasa.shared.Team;
 
 @:native("Player")
-extern class Player extends Element
+extern class Player extends mtasa.shared.Element
 {
   /**
     This method gets the current color of a player's name tag as RGB values. These are in the range 0-255.
@@ -63,5 +63,12 @@ extern class Player extends Element
     @see https://wiki.multitheftauto.com/wiki/SetPlayerNametagText
   **/
   public function setNametagText(text: String): Bool;
+
+  /**
+    This method returns a string containing the name of the specified player.
+
+    @see https://wiki.multitheftauto.com/wiki/GetPlayerName
+  **/
+  public function getName(): String;
 
 }
