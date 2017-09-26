@@ -26,9 +26,9 @@ abstract Vector2Abstract(Vector2) from Vector2 to Vector2 {
   }
 
   @:op(-A)
-  public function __unm(rhs: Vector2): Vector2Abstract {
+  public function __unm(): Vector2Abstract {
     var __unm = untyped getmetatable(this);
-    return __unm(this, rhs);
+    return __unm(this);
   }
 }
 
