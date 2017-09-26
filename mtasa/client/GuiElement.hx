@@ -1,7 +1,6 @@
 package mtasa.client;
 
 import mtasa.shared.MultiReturn;
-import mtasa.shared.Vector2;
 
 @:native("GuiElement")
 extern class GuiElement {
