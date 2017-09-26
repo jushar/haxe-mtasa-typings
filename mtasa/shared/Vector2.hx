@@ -2,32 +2,32 @@ package mtasa.shared;
 
 abstract Vector2Abstract(Vector2) from Vector2 to Vector2 {
   @:op(A + B)
-  public function __add(rhs: Vector2): Vector2Abstract {
-    var __add = untyped getmetatable(this);
+  public function __add(rhs: Vector2Abstract): Vector2Abstract {
+    var __add = untyped getmetatable(this).__add;
     return __add(this, rhs);
   }
 
   @:op(A - B)
-  public function __sub(rhs: Vector2): Vector2Abstract {
-    var __sub = untyped getmetatable(this);
+  public function __sub(rhs: Vector2Abstract): Vector2Abstract {
+    var __sub = untyped getmetatable(this).__sub;
     return __sub(this, rhs);
   }
 
   @:op(A * B)
-  public function __mul(rhs: Vector2): Vector2Abstract {
-    var __mul = untyped getmetatable(this);
+  public function __mul(rhs: haxe.extern.EitherType<Vector2Abstract,Float>): Vector2Abstract {
+    var __mul = untyped getmetatable(this).__mul;
     return __mul(this, rhs);
   }
 
   @:op(A / B)
-  public function __div(rhs: Vector2): Vector2Abstract {
-    var __div = untyped getmetatable(this);
+  public function __div(rhs: haxe.extern.EitherType<Vector2Abstract,Float>): Vector2Abstract {
+    var __div = untyped getmetatable(this).__div;
     return __div(this, rhs);
   }
 
   @:op(-A)
   public function __unm(): Vector2Abstract {
-    var __unm = untyped getmetatable(this);
+    var __unm = untyped getmetatable(this).__unm;
     return __unm(this);
   }
 }
