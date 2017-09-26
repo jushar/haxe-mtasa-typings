@@ -2,6 +2,7 @@ package mtasa.client;
 
 import mtasa.shared.MultiReturn;
 
+@:native("GuiWindow")
 extern class GuiWindow extends GuiElement {
   /**
 
