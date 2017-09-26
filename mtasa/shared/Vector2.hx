@@ -6,6 +6,30 @@ abstract Vector2Abstract(Vector2) from Vector2 to Vector2 {
     var __add = untyped getmetatable(this);
     return __add(this, rhs);
   }
+
+  @:op(A - B)
+  public function __sub(rhs: Vector2): Vector2Abstract {
+    var __sub = untyped getmetatable(this);
+    return __sub(this, rhs);
+  }
+
+  @:op(A * B)
+  public function __mul(rhs: Vector2): Vector2Abstract {
+    var __mul = untyped getmetatable(this);
+    return __mul(this, rhs);
+  }
+
+  @:op(A / B)
+  public function __div(rhs: Vector2): Vector2Abstract {
+    var __div = untyped getmetatable(this);
+    return __div(this, rhs);
+  }
+
+  @:op(-A)
+  public function __unm(rhs: Vector2): Vector2Abstract {
+    var __unm = untyped getmetatable(this);
+    return __unm(this, rhs);
+  }
 }
 
 /**
