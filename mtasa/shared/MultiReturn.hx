@@ -226,3 +226,9 @@ package mtasa.shared;
   var type: String;
   var name: String;
 }
+
+@:multiReturn extern class MaterialSize{
+  var width: Int;
+  var height: Int;
+  var depth: Int;
+}

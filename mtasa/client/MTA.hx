@@ -326,11 +326,88 @@ extern class MTA
     @see https://wiki.multitheftauto.com/wiki/SetAnalogControlState
   **/
   public static function setAnalogControlState(controlName: String, state: Float): Bool;
-  
+
   /**
     This function retrieves the local screen size according to the resolution they are using.
-    
+
     @see https://wiki.multitheftauto.com/wiki/GuiGetScreenSize
   **/
   public static function guiGetScreenSize(): ScreenSize;
+
+  /**
+    This function is used to clear render target.
+
+    @see https://wiki.multitheftauto.com/wiki/DxSetRenderTarget
+  **/
+  public static function dxSetRenderTarget(): Bool;
+
+  /**
+    This function gets information about various internal datum
+
+    @see https://wiki.multitheftauto.com/wiki/DxGetStatus
+  **/
+  public static function dxGetStatus(): lua.Table<String,String>;
+
+  /**
+    This function is used for testing scripts written using guiCreateFont, dxCreateFont, dxCreateShader and dxCreateRenderTarget.
+
+    @see https://wiki.multitheftauto.com/wiki/DxSetTestMode
+  **/
+  public static function dxSetTestMode(testMode: String): Bool;
+
+  /**
+    This function gets the dimensions of pixels contained in a string. It works with all pixel formats.
+
+    @see https://wiki.multitheftauto.com/wiki/DxGetPixelsSize
+  **/
+  public static function dxGetPixelsSize(pixels: String): Vector2;
+
+  /**
+    This function returns the format of pixels contained in a string.
+
+    @see https://wiki.multitheftauto.com/wiki/DxGetPixelsFormat
+  **/
+  public static function dxGetPixelsFormat(pixels: String): String;
+
+  /**
+    This function converts pixels from one format to another.
+    @param newFormat `plain` or `png` or `jpeg`
+    @see https://wiki.multitheftauto.com/wiki/DxConvertPixels
+  **/
+  public static function dxConvertPixels(pixels: String, newFormat: String, ?quality: Int): String;
+
+  /**
+    This function gets the color of a single pixel from pixels contained in a string. It only works with 'plain' format pixels.
+
+    @see https://wiki.multitheftauto.com/wiki/DxGetPixelColor
+  **/
+  public static function dxGetPixelColor(pixels: String, position: Vector2): Color;
+
+  /**
+    This function sets the color of a single pixel for pixels contained in a string. It only works with 'plain' format pixels.
+
+    @see https://wiki.multitheftauto.com/wiki/DxSetPixelColor
+  **/
+  public static function dxSetPixelColor(pixels: String, position: Vector2, r: Int, g: Int, b: Int, ?a: Int): Bool;
+
+  /**
+    This function sets the current blend mode for the dxDraw functions.
+    @param blendMode `blend`, `add`, `modulate_add`, `overwrite`
+    @see https://wiki.multitheftauto.com/wiki/DxSetBlendMode
+  **/
+  public static function dxSetBlendMode(blendMode: String): Bool;
+
+  /**
+    This function returns the current blend mode for the dxDraw functions. The blend mode is set using dxSetBlendMode
+    `blend`, `add`, `modulate_add`, `overwrite`
+    @see https://wiki.multitheftauto.com/wiki/DxGetBlendMode
+  **/
+  public static function dxGetBlendMode(): String;
+
+  /**
+    This function allows for the positioning of dxDraw calls to be automatically adjusted according to the client's aspect ratio setting.
+
+    @see https://wiki.multitheftauto.com/wiki/DxSetAspectRatioAdjustmentEnabled
+  **/
+  public static function dxSetAspectRatioAdjustmentEnabled(enabled: Bool, ratio: Float): Bool;
 }

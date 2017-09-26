@@ -1,7 +1,7 @@
 package mtasa.client;
 
 @:native("DxTexture")
-extern class DxTexture {
+extern class DxTexture extends DxMaterial{
   /**
     This function creates a texture element that can be used in the dxDraw functions.
 
@@ -23,15 +23,13 @@ extern class DxTexture {
 
     @see https://wiki.multitheftauto.com/wiki/DxSetTexturePixels
   **/
-  //public function setPixels(texture: Element) // waiting for element class
-  // bool dxSetTexturePixels ( [ int surfaceIndex = 0, ] element texture, string pixels [, int x = 0, int y = 0, int width = 0, int height = 0 ] )
+  public function setPixels(?surfaceIndex: Int): Bool;
 
   /**
     This function fetches the pixels from a texture element. It can be used with a standard texture, render target or screen source.
 
     @see https://wiki.multitheftauto.com/wiki/DxGetTexturePixels
   **/
-  //public function getPixels(texture: Element) // waiting for element class
-  //string dxGetTexturePixels ( [ int surfaceIndex = 0, ] element texture [, int x = 0, int y = 0, int width = 0, int height = 0 ] )
+  public function getPixels(?surfaceIndex: Int, ?x: Int, ?y: Int, ?width: Int, ?height: Int): String;
 }
 
