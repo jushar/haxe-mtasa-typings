@@ -1,14 +1,12 @@
 package mtasa.client;
 
-import mtasa.shared.MultiReturn;
-
 @:native("GuiWindow")
 extern class GuiWindow extends GuiElement {
   /**
 
     @see https://wiki.multitheftauto.com/wiki/GuiCreateWindow
   **/
-  public function create(position: Position2d, size: Position2d, titleBarText: String, relative: Bool): GuiWindow;
+  public function create(x: Int, y: Int, z: Int, width: Int, height: Int, titleBarText: String, relative: Bool): GuiWindow;
 
   /**
 
