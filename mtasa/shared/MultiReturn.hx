@@ -232,3 +232,8 @@ package mtasa.shared;
   var height: Int;
   var depth: Int;
 }
+
+@:multiReturn extern class FontNameContainer{
+  var name: String;
+  var font: Any; // font is missing
+}
