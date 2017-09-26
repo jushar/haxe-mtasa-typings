@@ -6,7 +6,7 @@ extern class GuiEdit extends GuiElement {
 
     @see https://wiki.multitheftauto.com/wiki/GuiCreateEdit
   **/
-  public function create(x: Int, y: Int, z: Int, width: Int, height: Int, text: String, relative: Bool, ?parent: GuiElement): GuiEdit;
+  public function create(x: Int, y: Int, width: Int, height: Int, text: String, relative: Bool, ?parent: GuiElement): GuiEdit;
 
   /**
 
