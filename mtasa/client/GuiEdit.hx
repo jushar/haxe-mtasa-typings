@@ -1,12 +1,14 @@
 package mtasa.client;
 
+import mtasa.shared.Vector2;
+
 @:native("GuiEdit")
 extern class GuiEdit extends GuiElement {
   /**
 
     @see https://wiki.multitheftauto.com/wiki/GuiCreateEdit
   **/
-  public static function create(x: Int, y: Int, width: Int, height: Int, text: String, relative: Bool, ?parent: GuiElement): GuiEdit;
+  public static function create(position: Vector2, size: Vector2, text: String, relative: Bool, ?parent: GuiElement): GuiEdit;
 
   /**
 
