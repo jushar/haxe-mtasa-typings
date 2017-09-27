@@ -1,4 +1,7 @@
 package mtasa.shared;
+
+import mtasa.client.GuiFont;
+
 @:multiReturn extern class RGB{
   var r: Int;
   var g: Int;
@@ -235,5 +238,5 @@ package mtasa.shared;
 
 @:multiReturn extern class FontNameContainer{
   var name: String;
-  var font: Any; // font is missing
+  var font: GuiFont;
 }

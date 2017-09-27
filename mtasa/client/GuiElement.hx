@@ -158,7 +158,7 @@ extern class GuiElement {
 
     @see https://wiki.multitheftauto.com/wiki/GuiSetFont
   **/
-  public function setFont(font: Any): Bool; // Todo: Font ist missing
+  public function setFont(font: GuiFont): Bool;
 
   /**
 
