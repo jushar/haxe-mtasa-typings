@@ -227,7 +227,7 @@ extern class MTA
 
     @see https://wiki.multitheftauto.com/wiki/InterpolateBetween
   **/
-  public static function interpolateBetween(vec1: Vector3, vec2: Vector3, progress: Float, easingType: String, ?fEasingPeriod: Float, ?fEasingAmplitude: Float, ?fEasingOvershoot: Float): Vector3;
+  public static function interpolateBetween(vec1: Vector3, vec2: Vector3, progress: Float, easingType: String, ?fEasingPeriod: Float, ?fEasingAmplitude: Float, ?fEasingOvershoot: Float): Position3d;
 
   /**
     This function converts a single value (preferably a Lua table) into a JSON encoded string. You can use this to store the data and then load it again using fromJSON.
@@ -852,5 +852,5 @@ extern class MTA
 
     @see https://wiki.multitheftauto.com/wiki/BitReplace
   **/
-  public static function bitExtract (var: Int, field: Int, width: Int): Int;
+  public static function bitExtract (val: Int, field: Int, width: Int): Int;
 }
