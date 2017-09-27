@@ -18,8 +18,7 @@ extern class GuiGridList extends GuiElement {
   /**
 
   **/
-  @:overload(function(itemTexts: haxe.extern.Rest<haxe.extern.EitherType<Int, String>>): Int {});
-  public function addRow(): Int;
+  public function addRow(itemTexts: haxe.extern.Rest<haxe.extern.EitherType<Int, String>>): Int;
 
   /**
 
@@ -34,8 +33,7 @@ extern class GuiGridList extends GuiElement {
   /**
 
   **/
-  @:overload(function(rowIndex: Int, itemTexts: haxe.extern.Rest<haxe.extern.EitherType<Int, String>>): Int {});
-  public function insertRowAfter(rowIndex: Int): Int;
+  public function insertRowAfter(rowIndex: Int, itemTexts: haxe.extern.Rest<haxe.extern.EitherType<Int, String>>): Int;
 
   /**
 
@@ -95,7 +93,7 @@ extern class GuiGridList extends GuiElement {
   /**
 
   **/
-  public function getSelectedItems(): lua.Table.Table<Int, GridListItem>; // Todo: dunno if this works
+  public function getSelectedItems(): lua.Table.AnyTable; // Todo: okay?
 
   /**
 
