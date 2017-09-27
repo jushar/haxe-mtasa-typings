@@ -240,3 +240,8 @@ import mtasa.client.GuiFont;
   var name: String;
   var font: GuiFont;
 }
+
+@:multiReturn extern class GridListItem{
+  var rowIndex: Int;
+  var columnIndex: Int;
+}
