@@ -87,7 +87,7 @@ extern class MTA
 
     @see https://wiki.multitheftauto.com/wiki/Tocolor
   **/
-  public static function tocolor(red: Int, green: Int, blue: Int, ?alpha: Int): Int;
+  public static function tocolor(red: haxe.extern.EitherType<Int, Float>, green: haxe.extern.EitherType<Int, Float>, blue: haxe.extern.EitherType<Int, Float>, ?alpha: haxe.extern.EitherType<Int, Float>): Int;
   /**
     Draws an image on the screen for a single frame.
 
