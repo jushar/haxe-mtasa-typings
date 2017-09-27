@@ -846,5 +846,11 @@ extern class MTA
     @see https://wiki.multitheftauto.com/wiki/CancelLatentEvent
   **/
   public static function cancelLatentEvent(thePlayer: Player, handle: Int): Bool;
+  
+  /**
+    This function returns the unsigned number formed by var value with replacement specified at bits field to field + width - 1
 
+    @see https://wiki.multitheftauto.com/wiki/BitReplace
+  **/
+  public static function bitExtract (var: Int, field: Int, width: Int): Int;
 }
