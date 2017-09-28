@@ -410,4 +410,11 @@ extern class MTA
     @see https://wiki.multitheftauto.com/wiki/DxSetAspectRatioAdjustmentEnabled
   **/
   public static function dxSetAspectRatioAdjustmentEnabled(enabled: Bool, ratio: Float): Bool;
+  
+  /**
+    This function determines if a certain key is pressed or not.
+
+    @see https://wiki.multitheftauto.com/wiki/GetKeyState
+  **/
+  public static function getKeyState(keyName: String): Bool;
 }
