@@ -417,4 +417,11 @@ extern class MTA
     @see https://wiki.multitheftauto.com/wiki/GetKeyState
   **/
   public static function getKeyState(keyName: String): Bool;
+  
+  /**
+    This function retrieves the theoretical width of a certain piece of text, if it were to be drawn using dxDrawText.
+    
+    @see https://wiki.multitheftauto.com/wiki/DxGetTextWidth
+  **/
+  public static function dxGetTextWidth(text: String, ?scale: Float, ?font: Dynamic, ?colorCoded: Bool): Float;
 }
