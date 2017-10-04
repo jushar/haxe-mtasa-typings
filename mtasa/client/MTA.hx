@@ -88,6 +88,7 @@ extern class MTA
     @see https://wiki.multitheftauto.com/wiki/Tocolor
   **/
   public static function tocolor(red: haxe.extern.EitherType<Int, Float>, green: haxe.extern.EitherType<Int, Float>, blue: haxe.extern.EitherType<Int, Float>, ?alpha: haxe.extern.EitherType<Int, Float>): Int;
+  
   /**
     Draws an image on the screen for a single frame.
 
@@ -430,5 +431,5 @@ extern class MTA
 	
     @see https://wiki.multitheftauto.com/wiki/TriggerServerEvent
   **/
-  public function triggerServerEvent(event: String, theElement: Element, arguments: haxe.extern.Rest<Dynamic>): Bool;
+  public static function triggerServerEvent(event: String, theElement: Element, arguments: haxe.extern.Rest<Dynamic>): Bool;
 }
