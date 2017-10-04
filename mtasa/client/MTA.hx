@@ -11,6 +11,7 @@ extern class MTA
   // Global vars
   public static var guiRoot: Element;
   public static var localPlayer: Player;
+  public static var resourceRoot: Element;
 
   /**
     This function returns an element that corresponds to the game camera.

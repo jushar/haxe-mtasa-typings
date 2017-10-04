@@ -30,7 +30,7 @@ extern class Resource {
 
     @see https://wiki.multitheftauto.com/wiki/GetResourceFromName
   **/
-  public static function getFromName(): Resource;
+  public static function getFromName(resourceName: String): Resource;
 
   /**
     This function gets the name of the specified resource.
