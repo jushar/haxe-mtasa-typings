@@ -8,7 +8,8 @@ extern class GuiStaticImage extends GuiElement {
 
     @see https://wiki.multitheftauto.com/wiki/GuiCreateStaticImage
   **/
-  public static function create(position: Vector2, size: Vector2, path: String, relative: Bool, ?parent: GuiElement): GuiStaticImage;
+  @:native("create")
+  public function new(position: Vector2, size: Vector2, path: String, relative: Bool, ?parent: GuiElement);
 
   /**
 

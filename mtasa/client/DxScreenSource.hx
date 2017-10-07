@@ -7,7 +7,8 @@ extern class DxScreenSource {
 
     @see https://wiki.multitheftauto.com/wiki/DxCreateScreenSource
   **/
-  public static function create(width: Int, height: Int): DxScreenSource;
+  @:native("create")
+  public function new(width: Int, height: Int);
 
   /**
     This function creates a screen source, which is a special type of texture that contains the screen as rendered by GTA

@@ -8,7 +8,8 @@ extern class GuiScrollPane extends GuiElement {
 
     @see https://wiki.multitheftauto.com/wiki/GuiCreateScrollPane
   **/
-  public static function create(position: Vector2, size: Vector2, relative: Bool, ?parent: GuiElement): GuiScrollPane;
+  @:native("create")
+  public function new(position: Vector2, size: Vector2, relative: Bool, ?parent: GuiElement);
 
   /**
 

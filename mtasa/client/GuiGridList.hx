@@ -8,7 +8,8 @@ extern class GuiGridList extends GuiElement {
   /**
 
   **/
-  public static function create(position: Vector2, size: Vector2, realtive: Bool, ?parent: GuiElement): GuiGridList;
+  @:native("create")
+  public function new(position: Vector2, size: Vector2, realtive: Bool, ?parent: GuiElement);
 
   /**
 

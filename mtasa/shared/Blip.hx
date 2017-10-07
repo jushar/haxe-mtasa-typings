@@ -17,7 +17,8 @@ extern class Blip extends Element
     @param visibleTo only server side
     @see https://wiki.multitheftauto.com/wiki/CreateBlip
   **/
-  public static function create(position: Vector3, ?icon: Int, ?size: Int, ?r: Int, ?g: Int, ?b: Int, ?a: Int, ?ordering: Int, ?visibleDistance: Float, ?visibleTo: Element): Blip;
+  @:native("create")
+  public function new(position: Vector3, ?icon: Int, ?size: Int, ?r: Int, ?g: Int, ?b: Int, ?a: Int, ?ordering: Int, ?visibleDistance: Float, ?visibleTo: Element);
 
   /**
     This function creates a blip that is attached to an element. This blip is displayed as an icon on the client's radar and will 'follow' the element that it is attached to around.

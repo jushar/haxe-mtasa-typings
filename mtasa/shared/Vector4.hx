@@ -12,7 +12,9 @@ extern class Vector4 {
   public var z: Float;
   public var w: Float;
 
-  public static function create(x: Float, y: Float, z: Float, w: Float): Vector4;
+  @:native("create")
+  public function new(x: Float, y: Float, z: Float, w: Float);
+
   public function normalize(): Bool;
 
   /**

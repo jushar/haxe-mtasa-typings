@@ -7,7 +7,8 @@ extern class DxRenderTarget {
 
     @see https://wiki.multitheftauto.com/wiki/DxCreateRenderTarget
   **/
-  public static function create(width: Int, height: Int, ?withAlpha: Bool): DxRenderTarget;
+  @:native("create")
+  public function new(width: Int, height: Int, ?withAlpha: Bool);
 
   /**
     This function changes the drawing destination for the dx functions. It can be used to select a previously created render target, or if called with no arguments, restore drawing directly to the screen.

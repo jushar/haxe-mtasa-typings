@@ -6,5 +6,6 @@ extern class GuiFont extends Element {
 
     @see https://wiki.multitheftauto.com/wiki/GuiCreateFont
   **/
-  public static function create(filepath: String, ?size: Int): GuiFont;
+  @:native("create")
+  public function new(filepath: String, ?size: Int);
 }

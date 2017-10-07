@@ -8,7 +8,8 @@ extern class GuiWindow extends GuiElement {
 
     @see https://wiki.multitheftauto.com/wiki/GuiCreateWindow
   **/
-  public static function create(position: Vector2, size: Vector2, titleBarText: String, relative: Bool): GuiWindow;
+  @:native("create")
+  public function new(position: Vector2, size: Vector2, titleBarText: String, relative: Bool);
 
   /**
 

@@ -8,7 +8,8 @@ extern class Connection extends mtasa.shared.Element
     @param databaseType sqlite ( Path to file ) or mysql ( dbname=NAME;host=IP )
     @see https://wiki.multitheftauto.com/wiki/DbConnect
   **/
-  public static function create(databaseType: String, host: String, ?username: String, ?password: String, ?options: String): Connection;
+  @:native("create")
+  public function new(databaseType: String, host: String, ?username: String, ?password: String, ?options: String);
 
   /**
     This function escapes arguments in the same way as dbQuery, except dbPrepareString returns the query string instead of processing the query. This allows you to safely build complex query strings from component parts and help prevent (one class of) SQL injection.

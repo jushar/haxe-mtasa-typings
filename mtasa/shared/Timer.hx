@@ -11,7 +11,8 @@ extern class Timer
     @param timesToExecute 0 = infinite
     @see https://wiki.multitheftauto.com/wiki/SetTimer
   **/
-  public static function create(theFunction: Dynamic, timeInterval: Int, timesToExecute: Int, arguments: haxe.extern.Rest<Dynamic>): Timer;
+  @:native("create")
+  public function new(theFunction: Dynamic, timeInterval: Int, timesToExecute: Int, arguments: haxe.extern.Rest<Dynamic>);
 
   /**
     This function allows you to kill/halt existing timers.

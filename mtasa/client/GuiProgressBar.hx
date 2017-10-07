@@ -8,7 +8,8 @@ extern class GuiProgressBar extends GuiElement {
 
     @see https://wiki.multitheftauto.com/wiki/GuiCreateProgressBar
   **/
-  public static function create(position: Vector2, size: Vector2, relative: Bool, ?paren: GuiElement): GuiProgressBar;
+  @:native("create")
+  public function new(position: Vector2, size: Vector2, relative: Bool, ?paren: GuiElement);
 
   /**
 

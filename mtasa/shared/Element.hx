@@ -34,7 +34,8 @@ extern class Element
 
     @see https://wiki.multitheftauto.com/wiki/CreateElement
   **/
-  public static function create(elementType: String, ?elementId: String): Element;
+  @:native("create")
+  public function new(elementType: String, ?elementId: String);
 
   /**
     Destroys an element.

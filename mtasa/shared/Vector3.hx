@@ -14,8 +14,9 @@ extern class Vector3 {
   /**
     This is default constructor for the Vector3 class and returns a Vector3 object.
   **/
-  public static function create(x: Float, y: Float, z: Float): Vector3;
-  
+  @:native("create")
+  public function new(x: Float, y: Float, z: Float);
+
   /**
     Return lenght in Float from map center ( 0,0,0 ) to this vector3
   **/

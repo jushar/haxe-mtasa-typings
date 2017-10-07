@@ -8,7 +8,8 @@ extern class GuiScrollBar extends GuiElement {
 
     @see https://wiki.multitheftauto.com/wiki/GuiCreateScrollBar
   **/
-  public static function create(position: Vector2, size: Vector2, horizontal: Bool, relative: Bool, ?parent: GuiElement): GuiScrollBar;
+  @:native("create")
+  public function new(position: Vector2, size: Vector2, horizontal: Bool, relative: Bool, ?parent: GuiElement);
 
   /**
 

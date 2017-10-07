@@ -18,7 +18,8 @@ extern class Object extends mtasa.shared.Element
     @param  isLowLod  a bool value specifying if the object will be low LOD. A low LOD object has no collision and a longer draw distance.
     @see https://wiki.multitheftauto.com/wiki/CreateObject
   **/
-  public static function create(model: UInt, position: Vector3, ?rotation: Vector3, ?isLowLOD: Bool): Object;
+  @:native("create")
+  public function new(model: UInt, position: Vector3, ?rotation: Vector3, ?isLowLOD: Bool);
 
   /**
     This method will smoothly move an object from its current position to a specified rotation and position.

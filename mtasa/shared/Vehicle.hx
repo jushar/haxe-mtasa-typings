@@ -12,7 +12,8 @@ extern class Vehicle extends Element
     @param numberplate lenght between 0 and 8 chars.
     @see https://wiki.multitheftauto.com/wiki/CreateVehicle
   **/
-  public static function create(model: UInt, position: Vector3, ?rotation: Vector3, ?numberplate: String, ?bDirection: Bool, ?variant1: Int, ?variant2: Int): Vehicle;
+  @:native("create")
+  public function new(model: UInt, position: Vector3, ?rotation: Vector3, ?numberplate: String, ?bDirection: Bool, ?variant1: Int, ?variant2: Int);
 
   /**
     This function returns whether the sirens are turned on for the specified vehicle.

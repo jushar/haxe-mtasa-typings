@@ -7,7 +7,8 @@ extern class DxFont {
     @param quality default,draft,proof,nonantialiased,antialiased,cleartype,cleartype_natural,
     @see https://wiki.multitheftauto.com/wiki/DxCreateFont
   **/
-  public static function create(filepath: String, ?size: Int, ?bold: Bool, ?quality: String): DxFont;
+  @:native("create")
+  public function new(filepath: String, ?size: Int, ?bold: Bool, ?quality: String);
 
   /**
     This function retrieves the theoretical height of a certain piece of text, if it were to be drawn using dxDrawText.

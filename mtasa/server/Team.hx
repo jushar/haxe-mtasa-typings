@@ -12,7 +12,8 @@ extern class Team extends Element
   /**
     This function is for creating a new team, which can be used to group players. Players will not join the team until they are respawned.
   **/
-  public static function create(teamName: String, ?colorR: Int, ?colorG: Int, ?colorB: Int): Object;
+  @:native("create")
+  public function new(teamName: String, ?colorR: Int, ?colorG: Int, ?colorB: Int);
 
   /**
     This method is for returning the number of players in the specified team.

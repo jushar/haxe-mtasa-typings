@@ -6,7 +6,8 @@ extern class GuiTab extends GuiElement {
 
     @see https://wiki.multitheftauto.com/wiki/GuiCreateTab
   **/
-  public function create(text: String, parent: GuiTabPanel): GuiTab;
+  @:native("create")
+  public function new(text: String, parent: GuiTabPanel);
 
   /**
 

@@ -12,7 +12,8 @@ extern class Ped extends Player
     @param synced serverside only.
     @see https://wiki.multitheftauto.com/wiki/CreatePed
   **/
-  public static function create(modelID: UInt, position: Vector3, ?rot: Float, ?synced: Bool): Ped;
+  @:native("create")
+  public function new(modelID: UInt, position: Vector3, ?rot: Float, ?synced: Bool);
 
   /**
     This function is used to set the current clothes on a ped.

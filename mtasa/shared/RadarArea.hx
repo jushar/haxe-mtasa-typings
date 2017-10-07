@@ -10,7 +10,8 @@ extern class RadarArea extends Element
 
     @see https://wiki.multitheftauto.com/wiki/CreateRadarArea
   **/
-  public static function create(leftBottom: Vector2, size: Vector2, ?red: Int, ?green: Int, ?blue: Int, ?alpha: Int, ?visibleTo: Element): RadarArea;
+  @:native("create")
+  public function new(leftBottom: Vector2, size: Vector2, ?red: Int, ?green: Int, ?blue: Int, ?alpha: Int, ?visibleTo: Element);
 
   /**
     This function can be used to retrieve the current color of a radar area.

@@ -1,17 +1,18 @@
 package mtasa.shared;
 
 @:native("File")
-extern class File
-{
-  /**
-    Creates a new file in a directory of a resource. If there already exists a file with the specified name, it is overwritten with an empty file.
-  **/
-  public function new(filePath:String);
-
+extern class File {
   /**
     Opens an existing file for reading and writing.
   **/
-  public static function create(filePath:String, ?readOnly:Bool): File;
+  @:native("create")
+  public function new(filePath:String, ?readOnly:Bool);
+
+  /**
+    Creates a new file in a directory of a resource. If there already exists a file with the specified name, it is overwritten with an empty file.
+  **/
+  @:native("new")
+  public static function create(filePath:String): File;
 
   /**
     Closes a file handle obtained by fileCreate or fileOpen.

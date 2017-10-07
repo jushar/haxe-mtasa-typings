@@ -8,6 +8,7 @@ extern class Pickup extends Element
   /**
     This function creates a pickup element, which is placed in the GTA world and can be picked up to retrieve a health, armour or a weapon.
   **/
+  @:native("create")
   public function new(vector: Vector3, theType: Int, amount_weapon_model: Int, ?respawnTime: Int, ?ammo: Int);
 
   /**

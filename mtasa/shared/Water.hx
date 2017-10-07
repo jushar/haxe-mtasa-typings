@@ -16,7 +16,8 @@ extern class Water
 
     @see https://wiki.multitheftauto.com/wiki/CreateWater
   **/
-  public static function create(bottom_left: Vector3, bottom_right: Vector3, top_left: Vector3, ?top_right: Vector3, ?bShallow: Bool): Water;
+  @:native("create")
+  public function new(bottom_left: Vector3, bottom_right: Vector3, top_left: Vector3, ?top_right: Vector3, ?bShallow: Bool);
 
   /**
     This function returns the water color of the GTA world.

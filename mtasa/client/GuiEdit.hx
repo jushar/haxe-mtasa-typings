@@ -8,7 +8,8 @@ extern class GuiEdit extends GuiElement {
 
     @see https://wiki.multitheftauto.com/wiki/GuiCreateEdit
   **/
-  public static function create(position: Vector2, size: Vector2, text: String, relative: Bool, ?parent: GuiElement): GuiEdit;
+  @:native("create")
+  public function new(position: Vector2, size: Vector2, text: String, relative: Bool, ?parent: GuiElement);
 
   /**
 

@@ -7,7 +7,8 @@ extern class DxShader {
     @param elementTypes one of this: world,vehicle,object,other
     @see https://wiki.multitheftauto.com/wiki/DxCreateShader
   **/
-  public static function create(filepath: String, ?priority: Float, ?maxDistance: Float, ?layered: Bool, elementTypes: String): DxScreenSource;
+  @:native("create")
+  public function new(filepath: String, ?priority: Float, ?maxDistance: Float, ?layered: Bool, elementTypes: String);
 
   /**
     This sets a named parameter for a shader element

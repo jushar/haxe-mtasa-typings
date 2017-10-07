@@ -15,6 +15,7 @@ extern class Marker extends Element
   /**
     Creates a new file in a directory of a resource. If there already exists a file with the specified name, it is overwritten with an empty file.
   **/
+  @:native("create")
   public function new(vector: Vector3, ?Type: String, ?size: Float, ?r: Int, ?g: Int, ?b: Int, ?a: Int, ?visibleTo: Element);
 
   /**

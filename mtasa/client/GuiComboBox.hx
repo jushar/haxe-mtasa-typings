@@ -8,7 +8,8 @@ extern class GuiComboBox extends GuiElement {
 
     @see https://wiki.multitheftauto.com/wiki/GuiCreateComboBox
   **/
-  public static function create(position: Vector2, size: Vector2, caption: String, relative: Bool, ?parent: GuiElement): GuiComboBox;
+  @:native("create")
+  public function new(position: Vector2, size: Vector2, caption: String, relative: Bool, ?parent: GuiElement);
 
   /**
 

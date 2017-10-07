@@ -9,7 +9,8 @@ extern class GuiLabel extends GuiElement {
 
     @see https://wiki.multitheftauto.com/wiki/GuiCreateLabel
   **/
-  public static function create(position: Vector2, size: Vector2, text: String, relative: Bool, ?parent: GuiElement): GuiLabel;
+  @:native("create")
+  public function new(position: Vector2, size: Vector2, text: String, relative: Bool, ?parent: GuiElement);
 
   /**
 

@@ -8,7 +8,8 @@ extern class GuiMemo extends GuiElement {
 
     @see https://wiki.multitheftauto.com/wiki/GuiCreateMemo
   **/
-  public static function create(position: Vector2, size: Vector2, text: String, relative: Bool, ?parent: GuiElement): GuiMemo;
+  @:native("create")
+  public function new(position: Vector2, size: Vector2, text: String, relative: Bool, ?parent: GuiElement);
 
   /**
 

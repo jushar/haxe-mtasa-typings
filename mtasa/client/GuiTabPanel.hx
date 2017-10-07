@@ -8,7 +8,8 @@ extern class GuiTabPanel extends GuiElement {
 
     @see https://wiki.multitheftauto.com/wiki/GuiCreateTabPanel
   **/
-  public function create(position: Vector2, size: Vector2, relative: Bool, ?parent: GuiElement): GuiTabPanel;
+  @:native("create")
+  public function new(position: Vector2, size: Vector2, relative: Bool, ?parent: GuiElement);
 
   /**
 

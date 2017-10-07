@@ -7,9 +7,10 @@ extern class DxTexture extends DxMaterial{
 
     @see https://wiki.multitheftauto.com/wiki/DxCreateTexture
   **/
+  @:native("create")
   @:overload(function(pixels: String, ?textureFormat: String, ?mipmaps: Bool, ?textureEdge: String): DxTexture {})
   @:overload(function(width: Int, height: Int, ?textureFormat: String, ?textureEdge: String, ?textureType: String, ?depth: Int): DxTexture {})
-  public static function create(filepath: String, ?textureFormat: String, ?mipmaps: Bool, ?textureEdge: String): DxTexture;
+  public function new(filepath: String, ?textureFormat: String, ?mipmaps: Bool, ?textureEdge: String);
 
   /**
     This functions allows you to change the edge handling after creating the texture.

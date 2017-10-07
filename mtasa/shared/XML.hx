@@ -18,7 +18,8 @@ extern class XML
 
     @see https://wiki.multitheftauto.com/wiki/XmlLoadFile
   **/
-  public static function load(filePath: String): XML;
+  @:native("load")
+  public function new(filePath: String);
 
   /**
     This function copies all contents of a certain node in a XML document to a new document file, so the copied node becomes the new file's root node.
