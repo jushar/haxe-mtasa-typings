@@ -433,4 +433,11 @@ extern class MTA
     @see https://wiki.multitheftauto.com/wiki/TriggerServerEvent
   **/
   public static function triggerServerEvent(event: String, theElement: Element, arguments: haxe.extern.Rest<Dynamic>): Bool;
+  
+  /**
+    This function will show or hide a part of the player's HUD.
+
+    @see https://wiki.multitheftauto.com/wiki/SetPlayerHudComponentVisible
+  **/
+  public static function setPlayerHudComponentVisible(component: String, show: Bool): Bool;
 }
