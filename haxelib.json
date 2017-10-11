@@ -7,6 +7,6 @@
   "version": "1.0.0",
   "classPath": ".",
   "releasenote": "Initial release.",
-  "contributors": [],
+  "contributors": ["Jusonex", "pawel-miczka", "CrosRoad95", "StiviiK"],
   "dependencies": {}
 }
