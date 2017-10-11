@@ -440,4 +440,11 @@ extern class MTA
     @see https://wiki.multitheftauto.com/wiki/SetPlayerHudComponentVisible
   **/
   public static function setPlayerHudComponentVisible(component: String, show: Bool): Bool;
+
+  /**
+    This function controls the input mode.
+
+    @see https://wiki.multitheftauto.com/wiki/GuiSetInputMode
+  **/
+  public static function guiSetInputMode(mode: String): Bool;
 }
