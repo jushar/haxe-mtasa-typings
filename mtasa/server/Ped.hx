@@ -5,7 +5,7 @@ import mtasa.shared.MultiReturn;
 import mtasa.shared.Vehicle;
 
 @:native("Ped")
-extern class Ped extends Player {
+extern class Ped extends Element {
 
   /**
     Retrieves the fighting style a player/ped is currently using.

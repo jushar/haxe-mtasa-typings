@@ -5,7 +5,7 @@ import mtasa.shared.MultiReturn;
 
 
 @:native("Player")
-extern class Player extends Element
+extern class Player extends Ped
 {
   /**
     This method is used to forcefully show a player's radar map.
