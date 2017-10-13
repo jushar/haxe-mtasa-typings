@@ -40,5 +40,6 @@ extern class ColShape extends mtasa.shared.Element
   /**
     This function creates a collision polygon. See Wikipedia for a definition of a polygon. The first set of X Y of this shape is not part of the colshape bounds, so can set anywhere in the game world, however for performance, place it as close to the centre of the polygon as you can. It should be noted this shape is 2D. There should be at least 3 bound points set.
   **/
+  @:overload(function(position: Vector2, vertexN: haxe.extern.Rest<Vector2>): ColShape {})
   public static function Polygon(position: Vector2, vertex1: Vector2, vertex2: Vector2, vertex3: Vector2, vertexN: haxe.extern.Rest<Vector2>):ColShape;
 }
