@@ -421,6 +421,13 @@ extern class MTA
   public static function getKeyState(keyName: String): Bool;
 
   /**
+    Binds a player's key to a handler function or command, which will be called when the key is pressed.
+
+    @see https://wiki.multitheftauto.com/wiki/BindKey
+  **/
+  public static function bindKey(key: String, state: String, callback: String -> String -> Void): Bool;
+
+  /**
     This function retrieves the theoretical width of a certain piece of text, if it were to be drawn using dxDrawText.
 
     @see https://wiki.multitheftauto.com/wiki/DxGetTextWidth
