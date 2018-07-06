@@ -89,7 +89,7 @@ extern class MTA
     @see https://wiki.multitheftauto.com/wiki/Tocolor
   **/
   public static function tocolor(red: haxe.extern.EitherType<Int, Float>, green: haxe.extern.EitherType<Int, Float>, blue: haxe.extern.EitherType<Int, Float>, ?alpha: haxe.extern.EitherType<Int, Float>): Int;
-  
+
   /**
     Draws an image on the screen for a single frame.
 
@@ -123,14 +123,14 @@ extern class MTA
 
     @see https://wiki.multitheftauto.com/wiki/DxDrawRectangle
   **/
-  public static function dxDrawRectangle(startPosition: Vector2, endPosition: Vector2, color: Int, ?postGUI: Bool, ?subPixelPositioning: Bool): Bool;
+  public static function dxDrawRectangle(startPosition: Vector2, size: Vector2, color: Int, ?postGUI: Bool, ?subPixelPositioning: Bool): Bool;
 
   /**
     Draws a string of text on the screen for one frame.
 
     @see https://wiki.multitheftauto.com/wiki/DxDrawText
   **/
-  public static function dxDrawText(text: String, positionLeftTop: Vector2, ?positionRightBottom: Vector2, ?color: Int, ?scale: Float, ?font: Dynamic, ?alignX: String, ?alignY: Float, ?clip: Bool, ?wordBreak: Bool, ?postGUI: Bool, ?colorCoded: Bool, ?subPixelPositioning: Bool, ?fRotation: Float, ?fRotationCenterX: Float, ?fRotationCenterY: Float): Bool;
+  public static function dxDrawText(text: String, positionLeftTop: Vector2, ?positionRightBottom: Vector2, ?color: Int, ?scale: Float, ?font: Dynamic, ?alignX: String, ?alignY: String, ?clip: Bool, ?wordBreak: Bool, ?postGUI: Bool, ?colorCoded: Bool, ?subPixelPositioning: Bool, ?fRotation: Float, ?fRotationCenterX: Float, ?fRotationCenterY: Float): Bool;
 
   /**
     This function draws a textured 3D line between two points in the 3D world - rendered for one frame.
@@ -412,28 +412,28 @@ extern class MTA
     @see https://wiki.multitheftauto.com/wiki/DxSetAspectRatioAdjustmentEnabled
   **/
   public static function dxSetAspectRatioAdjustmentEnabled(enabled: Bool, ratio: Float): Bool;
-  
+
   /**
     This function determines if a certain key is pressed or not.
 
     @see https://wiki.multitheftauto.com/wiki/GetKeyState
   **/
   public static function getKeyState(keyName: String): Bool;
-  
+
   /**
     This function retrieves the theoretical width of a certain piece of text, if it were to be drawn using dxDrawText.
-    
+
     @see https://wiki.multitheftauto.com/wiki/DxGetTextWidth
   **/
   public static function dxGetTextWidth(text: String, ?scale: Float, ?font: Dynamic, ?colorCoded: Bool): Float;
-  
+
   /**
     This function triggers an event previously registered on the server
-	
+
     @see https://wiki.multitheftauto.com/wiki/TriggerServerEvent
   **/
   public static function triggerServerEvent(event: String, theElement: Element, arguments: haxe.extern.Rest<Dynamic>): Bool;
-  
+
   /**
     This function will show or hide a part of the player's HUD.
 

@@ -85,7 +85,7 @@ extern class MTA
 
     @see https://wiki.multitheftauto.com/wiki/CreateExplosion
   **/
-  public static function createExplosion(position: Vector3, ?creator: Player): Bool;
+  public static function createExplosion(position: Vector3, type: Int, ?creator: Player): Bool; // TODO(Justus): Signature differs between server and client
 
   /**
     This function returns the maximum number of player slots on the server.
